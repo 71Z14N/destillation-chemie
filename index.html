@@ -317,13 +317,6 @@ h1 em{font-style:normal;color:var(--s-dens)}
 .step p{margin:10px 0 0;font-size:.9rem;color:var(--ink-2)}
 @media (max-width:820px){ .steps{grid-template-columns:1fr} }
 
-/* Referenzbild */
-.figurebox{margin-top:34px;border:1px solid var(--border);border-radius:16px;
-  overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
-.figurebox img{display:block;width:100%;height:auto}
-.figurebox figcaption{padding:14px 18px;font-size:.83rem;color:var(--muted);
-  border-top:1px solid var(--border)}
-
 /* ============================================================
    Durchführung
    ============================================================ */
@@ -541,6 +534,37 @@ h1.qh1 em.e{color:var(--p-eth)}
 .soon ul{margin:12px 0 0;padding-left:19px;font-size:.92rem;color:var(--ink-2)}
 .soon li{margin-bottom:4px}
 
+/* Quellenverzeichnis */
+.srcgroup{margin-top:34px}
+.srcgroup > .k{
+  display:block;margin-bottom:12px;font-size:.72rem;font-weight:660;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.sources{
+  counter-reset:src;margin:0;padding:0;list-style:none;
+  border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  background:var(--surface);box-shadow:var(--shadow);
+}
+.sources li{
+  display:grid;grid-template-columns:40px minmax(0,1fr) minmax(0,1fr);gap:18px;
+  align-items:baseline;padding:15px 22px;border-top:1px solid var(--border);
+}
+.sources li:first-child{border-top:none}
+.sources li::before{
+  counter-increment:src;content:"[" counter(src) "]";
+  font-variant-numeric:tabular-nums;font-size:.8rem;font-weight:660;color:var(--muted);
+}
+.sources .claim{font-size:.93rem;color:var(--ink)}
+.sources .claim small{display:block;margin-top:3px;font-size:.8rem;color:var(--muted)}
+.sources .src{font-size:.88rem;color:var(--ink-2)}
+.sources .src i{font-style:italic}
+.sources .src.todo{color:var(--s-temp)}
+.sources .src.todo::before{content:"▸ "}
+@media (max-width:760px){
+  .sources li{grid-template-columns:40px minmax(0,1fr);gap:6px 18px;padding:16px 20px}
+  .sources .src{grid-column:2}
+}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
@@ -554,6 +578,7 @@ h1.qh1 em.e{color:var(--p-eth)}
       <a href="#start">Fragestellung</a>
       <a href="#chemie">Chemie</a>
       <a href="#geschichte">Geschichte &amp; Politik</a>
+      <a href="#quellen">Quellen</a>
       <a href="#zusammenfuehrung">Zusammenführung</a>
     </nav>
     <button class="themebtn" id="themebtn" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel umschalten">◐</button>
@@ -1145,11 +1170,6 @@ h1.qh1 em.e{color:var(--p-eth)}
            Auffangkolben.</p>
       </button>
     </div>
-
-    <figure class="figurebox">
-      <img src="assets/teilchenmodell.png" alt="Schema Destillation im Teilchenmodell: Erhitzen, Verdampfen, Kondensieren mit Teilchen unterschiedlicher Siedepunkte" loading="lazy">
-      <figcaption>Teilchenmodell der Destillation — Übersichtsgrafik zum Versuch.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -1263,6 +1283,78 @@ h1.qh1 em.e{color:var(--p-eth)}
         <li>Beantwortung der Fragestellung</li>
         <li>Fazit</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUELLENVERZEICHNIS ================= -->
+<section id="quellen">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">03</span>Quellenverzeichnis</div>
+    <h2>Woher die Angaben stammen</h2>
+    <p class="lede">
+      Jede Aussage auf dieser Seite, die nicht aus unserer eigenen Messung stammt, ist hier
+      aufgeführt und wird im Text mit ihrer Nummer belegt.
+    </p>
+
+    <div class="soon">
+      <span class="k">Auszufüllen</span>
+      <h3>Die Belege müssen noch eingetragen werden</h3>
+      <p>Unten steht jede belegpflichtige Angabe der Seite mit einem leeren Feld für die Quelle.
+         Format einheitlich halten:</p>
+      <ul>
+        <li><b>Buch:</b> Nachname, Vorname: <i>Titel</i>. Verlag, Ort Jahr, S.&nbsp;xx.</li>
+        <li><b>Website:</b> Herausgeber: <i>Titel der Seite</i>. URL (abgerufen am TT.MM.JJJJ).</li>
+        <li><b>Unterricht:</b> Praktikumsskript / Lehrmittel, Kapitel und Seite.</li>
+      </ul>
+    </div>
+
+    <div class="srcgroup">
+      <span class="k">Geschichte &amp; Politik</span>
+      <ol class="sources">
+      <li>
+        <div class="claim">Tongefässe aus Tepe Gawra als früheste Destillationsgeräte<small>~3500 v.&nbsp;Chr., Mesopotamien</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Tribikos, Maria die Jüdin und das <i>Balneum Mariae</i><small>1.–3.&nbsp;Jh., Alexandria</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Jabir ibn Hayyan und der <i>al-anbīq</i>; ar-Rāzī gewinnt Alkohol aus Wein; Wortherkunft <i>al-kuhl</i><small>~800–900, Persien&nbsp;/&nbsp;Bagdad</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim"><i>Aqua vitae</i> als Heilmittel an der Schule von Salerno; Wortverwandtschaft zu Eau&nbsp;de&nbsp;vie, Aquavit und <i>uisce beatha</i><small>12.&nbsp;Jh., Salerno</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Hieronymus Brunschwig, <i>Liber de arte distillandi</i><small>Strassburg 1500</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Aeneas Coffey patentiert die kontinuierliche Brennkolonne (Rektifikation)<small>Dublin 1830</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Heutige Anwendungen: Rohöldestillation, Luftzerlegung, Bioethanol; Höhe industrieller Kolonnen<small>Abschnitt «Vom Schnapsbrenner zur Raffinerie»</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      </ol>
+    </div>
+
+    <div class="srcgroup">
+      <span class="k">Chemische Kennwerte</span>
+      <ol class="sources">
+      <li>
+        <div class="claim">Siedetemperaturen und Dichten von Ethanol und Wasser; Azeotrop bei ≈&nbsp;95.6&nbsp;Massen-%<small>Kennwerte in Abschnitt 1.1 und im Fussbereich</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      <li>
+        <div class="claim">Dichtetabelle zur Umrechnung von ρ in den Volumenanteil σ<small>Grundlage aller σ-Werte im Messprotokoll</small></div>
+        <div class="src todo">Quelle eintragen</div>
+      </li>
+      </ol>
     </div>
   </div>
 </section>
