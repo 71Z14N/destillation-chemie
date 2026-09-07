@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Destillation eines Alkohol/Wasser-Gemischs — Chemie-Praktikum</title>
-<meta name="description" content="Trennung eines Alkohol/Wasser-Gemischs durch Destillation. Versuchsauswertung mit Messdaten, Diagrammen, Teilchenmodell-Animation und geschichtlichem Hintergrund.">
+<title>Warum das erste Destillat mehr Ethanol enthält — Projektarbeit Destillation</title>
+<meta name="description" content="Projektarbeit zur Destillation eines Alkohol/Wasser-Gemischs. Fragestellung, Versuchsbeschreibung, Messprotokoll, Diagramme, Teilchenmodell-Animation sowie Geschichte und Politik der Destillation.">
 <style>
 /* ============================================================
    Farb-Tokens — Referenzpalette (Slots 1–3 kategorial)
@@ -456,6 +456,91 @@ footer li{margin-bottom:3px}
 @media (prefers-reduced-motion: reduce){
   #waterFlow,#heatWaves{animation:none}
 }
+
+/* ============================================================
+   Teil-Trenner (4-teiliger Aufbau)
+   ============================================================ */
+.parthead{padding:78px 0 0}
+.parthead + section{border-top:none;padding-top:38px}
+.partlabel{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid var(--border-strong);border-radius:999px;padding:5px 14px;
+  background:var(--surface);font-size:.735rem;font-weight:660;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
+}
+.partlabel .dot{width:7px;height:7px;border-radius:50%;background:var(--s-dens);flex:none}
+.parthead h2{margin-top:18px;font-size:clamp(1.85rem,4.2vw,2.8rem);font-weight:700;letter-spacing:-.032em}
+.parthead .lede{margin-top:12px}
+.parthead.pending .partlabel .dot{background:var(--muted)}
+
+/* Fragestellung im Titel */
+h1.qh1{font-size:clamp(1.95rem,4.6vw,3.15rem);max-width:21ch;letter-spacing:-.03em}
+h1.qh1 em.w{color:var(--p-wat)}
+h1.qh1 em.e{color:var(--p-eth)}
+
+/* Wegweiser auf der Startseite */
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.ovcard{
+  display:block;border:1px solid var(--border);border-radius:14px;padding:20px 22px;
+  background:var(--surface);text-decoration:none;color:inherit;
+  transition:border-color .18s, background .18s;
+}
+.ovcard:hover{border-color:var(--border-strong);background:var(--surface-2)}
+.ovcard .k{font-size:.72rem;font-weight:660;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ovcard h3{margin:9px 0 7px}
+.ovcard p{margin:0;font-size:.89rem;color:var(--ink-2)}
+.ovcard.pending{opacity:.62}
+.ovcard.pending .k{color:var(--s-temp)}
+@media (max-width:820px){ .overview{grid-template-columns:1fr} }
+
+/* Nummerierte Unterabschnitte */
+.subhead{display:flex;align-items:center;gap:11px;margin:46px 0 0;font-size:1.16rem;font-weight:660}
+.subhead > span{
+  display:grid;place-items:center;width:25px;height:25px;flex:none;border-radius:50%;
+  background:var(--s-dens);color:#fff;font-size:.75rem;font-weight:680;
+}
+.subhead + p{margin:10px 0 0;font-size:.95rem;color:var(--ink-2);max-width:66ch}
+.subhead + .tablewrap,.subhead + .chartcard{margin-top:18px}
+
+/* Foto der Apparatur */
+.photofig{
+  display:grid;grid-template-columns:278px 1fr;margin-top:34px;
+  border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  background:var(--surface);box-shadow:var(--shadow);
+}
+.photofig img{display:block;width:100%;height:auto;background:var(--surface-2)}
+.photofig .cap{padding:26px 28px;border-left:1px solid var(--border);align-self:center}
+.photofig .cap h3{margin-bottom:10px}
+.photofig .cap p{margin:0;font-size:.92rem;color:var(--ink-2)}
+.photofig .parts{margin:14px 0 0;padding:0;list-style:none;font-size:.88rem;color:var(--ink-2)}
+.photofig .parts li{display:flex;gap:10px;padding:4px 0;border-top:1px solid var(--border)}
+.photofig .parts li:first-child{border-top:none}
+.photofig .parts b{color:var(--ink);font-weight:600;flex:none;min-width:9.5em}
+@media (max-width:760px){
+  .photofig{grid-template-columns:1fr}
+  .photofig img{max-width:278px;margin:0 auto}
+  .photofig .cap{border-left:none;border-top:1px solid var(--border)}
+}
+
+/* Fliesstext-Antwort */
+.answer{margin-top:30px;max-width:70ch}
+.answer h3{margin:32px 0 10px}
+.answer h3:first-child{margin-top:0}
+.answer p{margin:0 0 .95em;font-size:1rem;color:var(--ink-2)}
+.answer b{color:var(--ink);font-weight:600}
+
+/* Platzhalter für noch fehlende Inhalte */
+.soon{
+  margin-top:30px;border:1px dashed var(--border-strong);border-radius:16px;
+  padding:26px 28px;background:var(--surface-2);
+}
+.soon .k{font-size:.72rem;font-weight:660;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--s-temp);display:block;margin-bottom:9px}
+.soon h3{margin-bottom:8px}
+.soon p{margin:0;font-size:.94rem;color:var(--ink-2);max-width:64ch}
+.soon ul{margin:12px 0 0;padding-left:19px;font-size:.92rem;color:var(--ink-2)}
+.soon li{margin-bottom:4px}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
@@ -464,14 +549,12 @@ footer li{margin-bottom:3px}
 
 <header class="topbar">
   <div class="wrap">
-    <div class="brand">Destillation <span class="sub">· Praktikum 01</span></div>
+    <div class="brand">Destillation <span class="sub">· Projektarbeit</span></div>
     <nav class="navlinks">
-      <a href="#prinzip">Prinzip</a>
-      <a href="#geschichte">Geschichte</a>
-      <a href="#animation">Teilchenmodell</a>
-      <a href="#durchfuehrung">Durchführung</a>
-      <a href="#daten">Messdaten</a>
-      <a href="#auswertung">Auswertung</a>
+      <a href="#start">Fragestellung</a>
+      <a href="#chemie">Chemie</a>
+      <a href="#geschichte">Geschichte &amp; Politik</a>
+      <a href="#zusammenfuehrung">Zusammenführung</a>
     </nav>
     <button class="themebtn" id="themebtn" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel umschalten">◐</button>
   </div>
@@ -479,16 +562,17 @@ footer li{margin-bottom:3px}
 
 <main>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
+<!-- ================= START / FRAGESTELLUNG ================= -->
+<section class="hero" id="start">
   <div class="wrap">
-    <span class="tag"><span class="dot"></span>Trennmethode · Destillation · Chemie BM</span>
-    <h1>Wie man <em>Ethanol</em> von Wasser trennt</h1>
+    <span class="tag"><span class="dot"></span>Projektarbeit · Chemie · Geschichte &amp; Politik</span>
+    <h1 class="qh1">Warum enthält das erste Destillat mehr <em class="e">Ethanol</em> und das letzte Destillat mehr <em class="w">Wasser</em>?</h1>
     <p class="lede">
-      Wir haben 50 mL eines Alkohol/Wasser-Gemischs (70 Vol-%) destilliert und die 25 aufgefangenen
+      Das ist die Fragestellung, die wir mit unserem Experiment beantworten wollten. Wir haben
+      50 mL eines Alkohol/Wasser-Gemischs (70 Vol-%) destilliert und die 25 aufgefangenen
       Fraktionen einzeln vermessen: Kopftemperatur, Dichte und daraus der Alkoholgehalt.
-      Diese Seite zeigt das Prinzip, seine Geschichte, ein interaktives Teilchenmodell — und
-      unsere echten Messdaten.
+      Diese Seite zeigt die Durchführung, unsere Messdaten und die Antwort auf die Frage —
+      dazu den geschichtlich-politischen Teil des Projekts und die Zusammenführung beider Themen.
     </p>
 
     <div class="authors">
@@ -526,13 +610,33 @@ footer li{margin-bottom:3px}
         <div class="note">in 25 Fraktionen zu je 2 mL</div>
       </div>
     </div>
+
+    <div class="overview">
+      <a class="ovcard" href="#chemie">
+        <div class="k">Teil 1</div>
+        <h3>Chemie</h3>
+        <p>Durchführung, Messprotokoll, Diagramme, die Antwort auf die Fragestellung und das
+           Teilchenmodell als interaktive Animation.</p>
+      </a>
+      <a class="ovcard pending" href="#geschichte">
+        <div class="k">Teil 2 · in Arbeit</div>
+        <h3>Geschichte &amp; Politik</h3>
+        <p>Fünftausend Jahre Apparatebau — die Zeitleiste steht. Die Beantwortung der
+           geschichtlich-politischen Fragestellung folgt.</p>
+      </a>
+      <a class="ovcard pending" href="#zusammenfuehrung">
+        <div class="k">Teil 3 · in Arbeit</div>
+        <h3>Zusammenführung</h3>
+        <p>Was die beiden Themen miteinander zu tun haben — vom Laborversuch zur
+           gesellschaftlichen Wirkung der Destillation.</p>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ================= PRINZIP ================= -->
-<section id="prinzip">
+<section id="grundlagen">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span>Das Experiment</div>
+    <div class="eyebrow">Grundlage der Fragestellung</div>
     <h2>Trennen, weil zwei Stoffe unterschiedlich gern verdampfen</h2>
     <p class="lede">
       Destillation ist ein <b>thermisches Trennverfahren für homogene Gemische</b>. Getrennt wird
@@ -545,8 +649,8 @@ footer li{margin-bottom:3px}
       <div>
         <div class="k">Ziel</div>
         <h3>Was wir wissen wollten</h3>
-        <p>Lässt sich ein Ethanol/Wasser-Gemisch durch einfache Destillation trennen — und
-           wie hoch ist der Alkoholgehalt der einzelnen Destillate?</p>
+        <p>Warum enthält das <b>erste</b> Destillat mehr Ethanol und das <b>letzte</b> mehr
+           Wasser — und wie hoch ist der Alkoholgehalt der einzelnen Fraktionen?</p>
       </div>
       <div>
         <div class="k">Grösse</div>
@@ -583,93 +687,294 @@ footer li{margin-bottom:3px}
   </div>
 </section>
 
-<!-- ================= GESCHICHTE ================= -->
-<section id="geschichte">
+<!-- ================= TEIL 1 · CHEMIE ================= -->
+<section class="parthead" id="chemie">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span>Geschichtlicher Hintergrund</div>
-    <h2>Fünftausend Jahre Apparatebau</h2>
+    <span class="partlabel"><span class="dot"></span>Teil 1</span>
+    <h2>Beantwortung der Chemie-Fragestellung</h2>
     <p class="lede">
-      Die Destillation ist eines der ältesten Verfahren der Chemie überhaupt. Sie wurde lange
-      vor jeder Teilchentheorie benutzt — man wusste, <i>dass</i> es funktioniert, aber
-      Jahrtausende lang nicht, <i>warum</i>.
+      Wie wir destilliert haben, was dabei herauskam — und was die 25 Messreihen über die
+      Fragestellung aussagen.
+    </p>
+  </div>
+</section>
+
+<section id="durchfuehrung">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span>Versuchsbeschreibung</div>
+    <h2>Wie wir vorgegangen sind</h2>
+    <p class="lede">
+      Aufbau nach Vorgabe: Rundkolben mit Destillieraufsatz, Thermometer auf Höhe des Seitenarms,
+      Liebig-Kühler im Gegenstrom, Vorstoss über den nummerierten Reagenzgläsern.
     </p>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">~3500 v.&nbsp;Chr.<small>Mesopotamien</small></div>
-        <div class="tl-body">
-          <h3>Duftstoffe aus dem Tontopf</h3>
-          <p>In Tepe Gawra fanden sich Tongefässe, die als früheste Destillationsgeräte gedeutet
-             werden. Damit wurden ätherische Öle und Duftstoffe aus Pflanzen gewonnen —
-             Parfüm, nicht Chemie.</p>
+    <figure class="photofig">
+      <img src="assets/apparatur.jpg" width="278" height="494" loading="lazy"
+           alt="Foto unserer Destillationsapparatur: Rundkolben auf dem Heizpilz, Destillieraufsatz mit Thermometer, schräg abwärts der Liebig-Kühler mit den beiden Wasserschläuchen, darunter das Reagenzglas.">
+      <figcaption class="cap">
+        <h3>Abb. 1 — Unser Aufbau</h3>
+        <p>Die Apparatur, wie sie bei uns im Labor stand. Der Vergleich mit dem
+           <a href="#animation">interaktiven Teilchenmodell</a> weiter unten zeigt, was in jedem
+           dieser Bauteile passiert.</p>
+        <ul class="parts">
+          <li><b>Rundkolben</b><span>50 mL Gemisch, Siedesteine, auf dem Heizpilz</span></li>
+          <li><b>Aufsatz</b><span>Thermometer auf Höhe des Seitenarms — misst die Kopftemperatur</span></li>
+          <li><b>Liebig-Kühler</b><span>Kühlwasser im Gegenstrom: Zulauf unten, Ablauf oben</span></li>
+          <li><b>Vorstoss</b><span>leitet das Kondensat ins nummerierte Reagenzglas</span></li>
+        </ul>
+      </figcaption>
+    </figure>
+
+    <ol class="proc">
+      <li><p><b>Reagenzgläser vorbereiten.</b> 25 Gläser durchnummerieren und 6.7 cm unterhalb des
+        oberen Randes markieren — diese Marke entspricht 2 mL Destillat.</p></li>
+      <li><p><b>Ansatz einfüllen.</b> 50 mL des eingefärbten Alkohol/Wasser-Gemischs (70 Vol-%)
+        mit dem Messzylinder abmessen und in den Rundkolben geben, dazu vier Siedesteinchen
+        gegen Siedeverzug.</p></li>
+      <li><p><b>Apparatur aufbauen</b> und den Kolben am Aufsatz mit der Klammer sichern.
+        Kühlwasser anstellen, bevor geheizt wird — <i>Gegenstrom</i>: Zulauf unten, Ablauf oben.</p></li>
+      <li><p><b>Erhitzen.</b> Heizpilz auf Stufe 3, mit dem Laborboy an den Kolben heranfahren.
+        Sobald es zu stark schäumt, den Heizpilz leicht absenken. Zielrate: etwa
+        <b>1 Tropfen pro Sekunde</b>.</p></li>
+      <li><p><b>Fraktionieren.</b> In jedes Reagenzglas exakt 2 mL bis zur Marke sammeln, dann
+        auf das nächste wechseln — bis das Gemisch vollständig übergegangen ist.</p></li>
+      <li><p><b>Temperatur protokollieren.</b> Beim ersten Tropfen und bei jedem Glaswechsel die
+        Kopftemperatur ablesen und in die Tabelle eintragen.</p></li>
+      <li><p><b>Dichte bestimmen.</b> Reagenzglas im Erlenmeyer auf die Waage stellen, tarieren,
+        mit der Eppendorfpipette genau 1 mL Destillat einfüllen, auf drei Nachkommastellen
+        ablesen. Zügig arbeiten — Alkohol ist leichtflüchtig.</p></li>
+      <li><p><b>Alkoholgehalt ermitteln.</b> Aus jeder Dichte über die Dichtetabelle den
+        Volumenanteil σ in Vol-% ablesen und protokollieren.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= MESSDATEN ================= -->
+<section id="daten">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span>Eigene Messdaten</div>
+    <h2>25 Fraktionen, drei Kurven</h2>
+    <p class="lede">
+      Zu jeder der 25 Fraktionen à 2 mL haben wir die Kopftemperatur abgelesen, 1 mL abpipettiert
+      und gewogen und daraus über die Dichtetabelle den Alkoholgehalt σ bestimmt. Zuerst das
+      Protokoll mit den Rohwerten, danach dieselben Zahlen als Kurven.
+    </p>
+
+    <h3 class="subhead"><span>1</span>Messprotokoll</h3>
+    <p>Alle Rohwerte des Versuchs. Die Zeile ganz unten zeigt die Mittelwerte über alle
+       25 Fraktionen.</p>
+    <div class="tablewrap">
+      <div class="tablehead">
+        <h3>Tab. 1 — Messprotokoll</h3>
+        <button class="btn" id="tableToggle" type="button" aria-expanded="true">Tabelle ausblenden</button>
+      </div>
+      <div class="tablescroll" id="tableScroll">
+        <table>
+          <caption class="sr-only">Kumuliertes Volumen, Temperatur, Dichte und Alkoholgehalt der 25 Destillate</caption>
+          <thead><tr>
+            <th scope="col">Nr.</th>
+            <th scope="col">V [mL]</th>
+            <th scope="col">T [°C]</th>
+            <th scope="col">ρ [g/mL]</th>
+            <th scope="col">σ [Vol-%]</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+          <tfoot><tr>
+            <th scope="row">Ø</th><td>50 gesamt</td><td id="fT">—</td><td id="fR">—</td><td id="fS">—</td>
+          </tr></tfoot>
+        </table>
+      </div>
+      <p style="margin:0;padding:12px 20px 16px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border)">
+        ⚠ Fraktionen 1 und 16 ergeben 100 Vol-%. Wegen des Azeotrops bei ≈ 97 Vol-% ist das
+        nicht erreichbar — beide Werte sind Messfehler. Siehe Auswertung.
+      </p>
+    </div>
+
+    <h3 class="subhead"><span>2</span>Diagramme</h3>
+    <p>Alle drei Diagramme tragen dieselbe x-Achse: das <b>kumulierte Volumen</b>, also wie viel
+       Destillat insgesamt bereits übergegangen ist. Fahre mit der Maus über eine Kurve, um
+       einzelne Fraktionen abzulesen.</p>
+    <div class="chartcard">
+      <div class="chart-head">
+        <div class="t">
+          <h3>Temperatur der Destillate</h3>
+          <p>Solange Ethanol im Kolben vorhanden ist, hält sich die Kopftemperatur auf einem
+             Plateau bei 78–79 °C. Der Anstieg am Ende ist das Signal: Der Alkohol ist aufgebraucht.</p>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">~1.–3.&nbsp;Jh.<small>Alexandria</small></div>
-        <div class="tl-body">
-          <h3>Maria die Jüdin und das Wasserbad</h3>
-          <p>Die alchemistische Schule Alexandrias beschreibt erste echte Apparaturen, etwa den
-             <i>Tribikos</i> mit drei Auffangrohren. Von Maria die Jüdin stammt das
-             <i>Balneum Mariae</i> — das Wasserbad, mit dem sich sanft und kontrolliert erhitzen
-             lässt. Der Heizpilz auf Stufe 3 ist sein direkter Nachfahre.</p>
+      <div class="chartbox" id="box-temp"></div>
+    </div>
+
+    <div class="chartcard">
+      <div class="chart-head">
+        <div class="t">
+          <h3>Dichte der Destillate</h3>
+          <p>Reines Ethanol hat 0.789 g/mL, Wasser 1.000 g/mL. Die gemessene Dichte liegt lange
+             nahe am Ethanolwert und klettert erst in den letzten Fraktionen Richtung Wasser.</p>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">~800–900<small>Persien / Bagdad</small></div>
-        <div class="tl-body">
-          <h3>Der Alembik — und der erste Alkohol</h3>
-          <p>Jabir ibn Hayyan perfektioniert den <i>al-anbīq</i> (daraus «Alembik»), einen
-             Destillierhelm mit gekühltem Ablaufrohr. Rund hundert Jahre später gewinnt
-             ar-Rāzī durch Destillation von Wein den Alkohol als eigenen Stoff. Auch das Wort
-             <b>Alkohol</b> stammt aus dem Arabischen (<i>al-kuhl</i>).</p>
+      <div class="chartbox" id="box-dens"></div>
+    </div>
+
+    <div class="chartcard">
+      <div class="chart-head">
+        <div class="t">
+          <h3>Alkoholgehalt der Destillate</h3>
+          <p>Aus der Dichte abgelesen. Das Spiegelbild der Dichtekurve — und die eigentliche
+             Antwort auf die Frage, ob die Trennung funktioniert hat.</p>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">12.&nbsp;Jh.<small>Salerno</small></div>
-        <div class="tl-body">
-          <h3>«Aqua vitae» — Wasser des Lebens</h3>
-          <p>An der Medizinschule von Salerno wird der destillierte Weingeist als Heilmittel
-             beschrieben. Aus <i>aqua vitae</i> werden später Eau de vie, Aquavit und Whisky
-             (<i>uisce beatha</i>) — allesamt derselbe Name.</p>
-        </div>
+      <div class="chartbox" id="box-conc"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANTWORT AUF DIE FRAGESTELLUNG ================= -->
+<section id="antwort">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">03</span>Antwort auf die Fragestellung</div>
+    <h2>Warum zuerst der Alkohol kommt — und am Schluss das Wasser</h2>
+
+    <div class="answer">
+      <h3>Ethanol siedet früher, deshalb verdampft es zuerst</h3>
+      <p>Bei der Destillation wird ein Flüssigkeitsgemisch erhitzt. Ethanol hat mit
+        <b>78.3 °C</b> einen niedrigeren Siedepunkt als Wasser mit <b>100 °C</b>. Deshalb
+        verdampft Ethanol beim Erhitzen zuerst stärker als Wasser. Dadurch enthält das erste
+        Destillat deutlich mehr Ethanol.</p>
+
+      <h3>Das bestätigen unsere Messwerte</h3>
+      <p>Der Alkoholgehalt war zu Beginn sehr hoch und lag bei den ersten Destillaten ungefähr
+        bei <b>85–90 %</b>. Gleichzeitig war die Dichte mit etwa <b>0.83–0.85 g/mL</b> relativ
+        niedrig, was auf einen hohen Ethanolanteil hinweist.</p>
+      <p>Mit zunehmender Destillation wird immer mehr Ethanol aus der Mischung entfernt. Dadurch
+        steigt der Anteil von Wasser. Die Temperatur stieg bei uns von etwa <b>71 °C auf 93 °C</b>,
+        während die Dichte bis auf <b>0.970 g/mL</b> zunahm. Gleichzeitig sank der Alkoholgehalt
+        bei den letzten Destillaten bis auf <b>24 %</b>. Das zeigt, dass die letzten Destillate
+        deutlich mehr Wasser enthielten.</p>
+
+      <h3>Warum die Werte nicht genau den Siedepunkten entsprechen</h3>
+      <p>Die Werte entsprechen jedoch nicht genau den Siedepunkten von reinem Ethanol und Wasser.
+        Das liegt daran, dass wir ein <b>Gemisch</b> destillierten und sich beide Stoffe teilweise
+        gemeinsam im Dampf befinden. Auch <b>Messungenauigkeiten</b> und <b>Wärmeverluste</b>
+        können zu Abweichungen geführt haben.</p>
+    </div>
+
+    <div class="findings" style="margin-top:34px">
+      <div class="finding ok">
+        <span class="q">Fazit</span>
+        <h3>Anreichern statt trennen</h3>
+        <p>Das erste Destillat enthält mehr Ethanol, weil Ethanol den niedrigeren Siedepunkt
+          besitzt und deshalb zuerst stärker verdampft. Während der Destillation wird immer mehr
+          Ethanol aus dem Gemisch entfernt. Dadurch nimmt der Wasseranteil im verbleibenden
+          Gemisch und somit auch in den späteren Destillaten zu.</p>
+        <p>Unsere Messwerte bestätigen dies: Der Alkoholgehalt und die Dichte zeigen deutlich,
+          dass die ersten Destillate alkoholreicher und die letzten Destillate wasserreicher
+          waren. Eine <b>vollständige Trennung ist jedoch nicht möglich</b>, da auch Wasser
+          bereits während der ersten Destillation teilweise mitverdampft.</p>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">1500<small>Strassburg</small></div>
-        <div class="tl-body">
-          <h3>Das erste Destillier-Lehrbuch</h3>
-          <p>Hieronymus Brunschwig veröffentlicht das <i>Liber de arte distillandi</i> — reich
-             illustriert und in deutscher Sprache. Destillation wird vom Geheimwissen zum
-             Handwerk.</p>
-        </div>
+    </div>
+
+    <h3 class="subhead"><span>+</span>Interpretation und Reflexion im Detail</h3>
+    <p>Die einzelnen Leitfragen aus dem Experiment — Siedepunkte, Vergleich mit dem Sollwert,
+       Volumenbilanz und die Abweichungen, die uns aufgefallen sind.</p>
+
+<div class="findings">
+      <div class="finding">
+        <span class="q">Prinzip &amp; physikalische Grundlage</span>
+        <h3>Getrennt wird nach Flüchtigkeit, nicht nach «Alkohol» und «Wasser»</h3>
+        <p>Über einer Flüssigkeit stellt sich ein Dampf ein, dessen Zusammensetzung <i>nicht</i>
+          der Flüssigkeit entspricht: Die leichter flüchtige Komponente ist im Dampf angereichert.
+          Die zugrunde liegende Grösse ist die Siedetemperatur — bei uns 78.3 °C für Ethanol gegen
+          100 °C für Wasser. Weil der Dampf aber nie <i>nur</i> aus Ethanol besteht, ist eine
+          einfache Destillation eine Anreicherung und keine vollständige Trennung.</p>
       </div>
-      <div class="tl-item accent">
-        <div class="tl-year">1830<small>Dublin</small></div>
-        <div class="tl-body">
-          <h3>Die Kolonne macht Schluss mit dem Kolben</h3>
-          <p>Aeneas Coffey patentiert die kontinuierlich arbeitende Brennkolonne. Statt einmal
-             zu destillieren, wiederholt eine Kolonne den Verdampfungs-/Kondensationsschritt
-             hundertfach übereinander — das ist die <b>Rektifikation</b>, und genau der Schritt,
-             der unserer einfachen Apparatur fehlt.</p>
-        </div>
+
+      <div class="finding">
+        <span class="q">Die beiden Reinstoffe</span>
+        <h3>Ethanol und Wasser</h3>
+        <p>Ethanol (C₂H₅OH): Siedetemperatur <b>78.3 °C</b>, Dichte <b>0.789 g/mL</b> bei 20 °C.
+          Wasser (H₂O): Siedetemperatur <b>100 °C</b>, Dichte <b>1.000 g/mL</b>.
+          Beide Werte tauchen in unseren Daten direkt auf: Die erste Fraktion misst 0.788 g/mL —
+          praktisch der Ethanolwert. Die letzte misst 0.970 g/mL und nähert sich Wasser.</p>
       </div>
-      <div class="tl-item accent">
-        <div class="tl-year">heute<small>Industrie</small></div>
-        <div class="tl-body">
-          <h3>Vom Schnapsbrenner zur Raffinerie</h3>
-          <p>Dasselbe Prinzip trennt heute Rohöl in Benzin, Kerosin und Bitumen, gewinnt
-             Sauerstoff und Stickstoff aus verflüssigter Luft und macht aus vergorener Biomasse
-             Bioethanol. Die Destillationskolonnen einer Raffinerie sind 60 Meter hoch — der
-             Rundkolben in unserer Kapelle fasst 250 mL.</p>
-        </div>
+
+      <div class="finding">
+        <span class="q">Die drei Diagramme im Vergleich</span>
+        <h3>Alle drei erzählen dieselbe Geschichte, nur in anderer Grösse</h3>
+        <p><b>Temperatur:</b> ein langes Plateau bei 78–79 °C über die ersten rund 30 mL. Solange
+          zwei Komponenten gemeinsam sieden, bleibt die Kopftemperatur beim Siedepunkt des
+          leichter flüchtigen Gemischs stehen. Ab etwa 42 mL steigt sie steil auf 93 °C — der
+          Kolbeninhalt ist jetzt so wasserreich, dass er erst bei höherer Temperatur siedet.</p>
+        <p><b>Dichte:</b> spiegelbildlich flach zwischen 0.833 und 0.846 g/mL, danach steiler
+          Anstieg auf 0.970 g/mL. <b>Alkoholgehalt:</b> exakt umgekehrt — hoch (85–90 Vol-%) im
+          Plateau, Absturz auf 24 Vol-% in der letzten Fraktion. Das ist zwingend so, weil σ
+          direkt aus ρ abgelesen wurde: mehr Wasser bedeutet höhere Dichte und tieferen Alkoholgehalt.</p>
+        <p><b>Fazit:</b> In den Destillaten 1–21 herrscht anteilsmässig klar <b>Ethanol</b> vor.
+          Erst ab Fraktion 23 (46 mL) dominiert Wasser. Die Temperaturkurve ist dabei der
+          Frühindikator — sie steigt schon an, bevor der Alkoholgehalt einbricht.</p>
+      </div>
+
+      <div class="finding warn">
+        <span class="q">Kumuliertes Volumen vs. Einsatz</span>
+        <h3>50 mL aus 50 mL — rechnerisch schön, praktisch unmöglich</h3>
+        <p>Die Tabelle ist so gebaut, dass 25 Fraktionen à 2 mL genau 50 mL ergeben. Eine
+          verlustfreie Destillation gibt es aber nicht. Real fehlen Volumen durch den
+          <b>Rückstand im Siedekolben</b> (Sumpf plus die nichtflüchtigen Farbstoffe), durch
+          <b>Benetzung</b> von Kolbenwand, Aufsatz und Kühlerrohr, durch <b>Dampfverluste</b> an
+          den Schliffen und durch die Reste in Pipette und Reagenzglas.</p>
+        <p>Gegenläufig wirkt ein Effekt, den man leicht übersieht: Ethanol und Wasser zeigen
+          <b>Volumenkontraktion</b>. 50 mL Gemisch enthalten mehr Einzelvolumen, als die Mischung
+          einnimmt — beim Trennen «gewinnt» man Volumen zurück. Dazu kommt, dass die 2-mL-Marke
+          von Auge angesetzt wurde; 25 kleine Abweichungen summieren sich. Dass die Bilanz genau
+          aufgeht, ist deshalb der Tabelle geschuldet, nicht der Messung.</p>
+      </div>
+
+      <div class="finding warn">
+        <span class="q">Mittelwert 83 Vol-% vs. Einsatz 70 Vol-%</span>
+        <h3>13 Prozentpunkte zu hoch — und dafür gibt es gute Gründe</h3>
+        <p>Weil alle Fraktionen gleich gross sind, ist das arithmetische Mittel zugleich das
+          volumengewichtete. Bei vollständiger, verlustfreier Destillation müsste es also die
+          70 Vol-% des Ansatzes reproduzieren. Es tut es nicht — aus zwei Klassen von Gründen:</p>
+        <p><b>Stofflich:</b> Es ging nicht das gesamte Wasser mit über. Was im Kolben zurückblieb,
+          war überwiegend Wasser. Fehlt aber Wasser in der Bilanz der aufgefangenen Fraktionen,
+          verschiebt sich deren Mittelwert nach oben.</p>
+        <p><b>Systematischer Messfehler — und der zeigt immer in dieselbe Richtung:</b> Ethanol
+          ist leichtflüchtig. Zwischen Pipettieren und Ablesen verdampft ein Teil der Probe, die
+          gewogene Masse wird zu klein, die berechnete Dichte zu klein — und aus zu kleiner Dichte
+          liest man einen zu <i>hohen</i> Alkoholgehalt ab. Dieselbe Richtung haben Luftblasen in
+          der Pipette und die Temperatur: Die Dichtetabelle gilt für 20 °C, unsere Destillate
+          waren beim Wägen wärmer und damit weniger dicht.</p>
+      </div>
+
+      <div class="finding ok">
+        <span class="q">Physikalische Obergrenze</span>
+        <h3>Zwei Messwerte von 100 Vol-% können nicht stimmen</h3>
+        <p>Ethanol und Wasser bilden bei rund 78.2 °C ein <b>Azeotrop</b>: Bei etwa 95.6 Massen-%
+          (≈ 97 Vol-%) Ethanol haben Dampf und Flüssigkeit dieselbe Zusammensetzung. Ab diesem
+          Punkt bringt weiteres Destillieren nichts mehr — reines Ethanol ist durch Destillation
+          grundsätzlich nicht erreichbar. Unsere Werte von 100 Vol-% bei den Fraktionen 1 und 16
+          sind daher Messfehler. Fraktion 16 verrät sich zusätzlich durch die Nachbarschaft: 0.791 g/mL
+          zwischen 0.842 und 0.833 g/mL ist ein Ausreisser, vermutlich ein Pipettier- oder Wägefehler.</p>
+        <p>Für wasserfreies Ethanol braucht die Industrie deshalb andere Verfahren —
+          Schleppmittel-Destillation oder Molekularsiebe. Genau hier hört die Destillation auf.</p>
+      </div>
+
+      <div class="finding ok">
+        <span class="q">Reichweite der Methode</span>
+        <h3>Die Trennung funktioniert — aber sie reichert nur an</h3>
+        <p>Aus 70 Vol-% Einsatz wurden Destillate mit über 85 Vol-% in den ersten zwei Dritteln
+          und ein wasserreicher Rest am Schluss. Der Alkohol wurde also deutlich angereichert,
+          der Sumpf im Kolben entsprechend abgereichert. Wer reineres Ethanol will, müsste die
+          ersten Fraktionen sammeln und erneut destillieren — oder gleich eine Kolonne verwenden,
+          die genau das hundertfach übereinander tut.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ANIMATION ================= -->
 <section id="animation">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">03</span>Teilchenmodell — interaktiv</div>
+    <div class="eyebrow"><span class="num">04</span>Teilchenmodell — interaktiv</div>
     <h2>Was im Kolben wirklich passiert</h2>
     <p class="lede">
       Die Apparatur unten läuft als Simulation. Jede Kugel ist ein Teilchen. Beobachte, wie
@@ -848,208 +1153,141 @@ footer li{margin-bottom:3px}
   </div>
 </section>
 
-<!-- ================= DURCHFÜHRUNG ================= -->
-<section id="durchfuehrung">
+<!-- ================= TEIL 2 · GESCHICHTE & POLITIK ================= -->
+<section class="parthead pending" id="geschichte">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">04</span>Durchführung</div>
-    <h2>Wie wir vorgegangen sind</h2>
+    <span class="partlabel"><span class="dot"></span>Teil 2</span>
+    <h2>Beantwortung der Fragestellung Geschichte &amp; Politik</h2>
     <p class="lede">
-      Aufbau nach Vorgabe: Rundkolben mit Destillieraufsatz, Thermometer auf Höhe des Seitenarms,
-      Liebig-Kühler im Gegenstrom, Vorstoss über den nummerierten Reagenzgläsern.
+      Die Destillation ist nicht nur ein Laborverfahren — sie hat Handel, Gesetzgebung und
+      Gesellschaft geprägt. Die Zeitleiste steht, die Beantwortung der Fragestellung folgt.
     </p>
-    <ol class="proc">
-      <li><p><b>Reagenzgläser vorbereiten.</b> 25 Gläser durchnummerieren und 6.7 cm unterhalb des
-        oberen Randes markieren — diese Marke entspricht 2 mL Destillat.</p></li>
-      <li><p><b>Ansatz einfüllen.</b> 50 mL des eingefärbten Alkohol/Wasser-Gemischs (70 Vol-%)
-        mit dem Messzylinder abmessen und in den Rundkolben geben, dazu vier Siedesteinchen
-        gegen Siedeverzug.</p></li>
-      <li><p><b>Apparatur aufbauen</b> und den Kolben am Aufsatz mit der Klammer sichern.
-        Kühlwasser anstellen, bevor geheizt wird — <i>Gegenstrom</i>: Zulauf unten, Ablauf oben.</p></li>
-      <li><p><b>Erhitzen.</b> Heizpilz auf Stufe 3, mit dem Laborboy an den Kolben heranfahren.
-        Sobald es zu stark schäumt, den Heizpilz leicht absenken. Zielrate: etwa
-        <b>1 Tropfen pro Sekunde</b>.</p></li>
-      <li><p><b>Fraktionieren.</b> In jedes Reagenzglas exakt 2 mL bis zur Marke sammeln, dann
-        auf das nächste wechseln — bis das Gemisch vollständig übergegangen ist.</p></li>
-      <li><p><b>Temperatur protokollieren.</b> Beim ersten Tropfen und bei jedem Glaswechsel die
-        Kopftemperatur ablesen und in die Tabelle eintragen.</p></li>
-      <li><p><b>Dichte bestimmen.</b> Reagenzglas im Erlenmeyer auf die Waage stellen, tarieren,
-        mit der Eppendorfpipette genau 1 mL Destillat einfüllen, auf drei Nachkommastellen
-        ablesen. Zügig arbeiten — Alkohol ist leichtflüchtig.</p></li>
-      <li><p><b>Alkoholgehalt ermitteln.</b> Aus jeder Dichte über die Dichtetabelle den
-        Volumenanteil σ in Vol-% ablesen und protokollieren.</p></li>
-    </ol>
   </div>
 </section>
 
-<!-- ================= MESSDATEN ================= -->
-<section id="daten">
+<section id="geschichte-zeitleiste">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">05</span>Messdaten &amp; Diagramme</div>
-    <h2>25 Fraktionen, drei Kurven</h2>
+    <div class="eyebrow"><span class="num">01</span>Geschichtlicher Hintergrund</div>
+    <h2>Fünftausend Jahre Apparatebau</h2>
     <p class="lede">
-      Alle drei Diagramme tragen dieselbe x-Achse: das <b>kumulierte Volumen</b>, also wie viel
-      Destillat insgesamt bereits übergegangen ist. Fahre mit der Maus über eine Kurve, um
-      einzelne Fraktionen abzulesen.
+      Die Destillation ist eines der ältesten Verfahren der Chemie überhaupt. Sie wurde lange
+      vor jeder Teilchentheorie benutzt — man wusste, <i>dass</i> es funktioniert, aber
+      Jahrtausende lang nicht, <i>warum</i>.
     </p>
 
-    <div class="chartcard">
-      <div class="chart-head">
-        <div class="t">
-          <h3>Temperatur der Destillate</h3>
-          <p>Solange Ethanol im Kolben vorhanden ist, hält sich die Kopftemperatur auf einem
-             Plateau bei 78–79 °C. Der Anstieg am Ende ist das Signal: Der Alkohol ist aufgebraucht.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">~3500 v.&nbsp;Chr.<small>Mesopotamien</small></div>
+        <div class="tl-body">
+          <h3>Duftstoffe aus dem Tontopf</h3>
+          <p>In Tepe Gawra fanden sich Tongefässe, die als früheste Destillationsgeräte gedeutet
+             werden. Damit wurden ätherische Öle und Duftstoffe aus Pflanzen gewonnen —
+             Parfüm, nicht Chemie.</p>
         </div>
       </div>
-      <div class="chartbox" id="box-temp"></div>
-    </div>
-
-    <div class="chartcard">
-      <div class="chart-head">
-        <div class="t">
-          <h3>Dichte der Destillate</h3>
-          <p>Reines Ethanol hat 0.789 g/mL, Wasser 1.000 g/mL. Die gemessene Dichte liegt lange
-             nahe am Ethanolwert und klettert erst in den letzten Fraktionen Richtung Wasser.</p>
+      <div class="tl-item">
+        <div class="tl-year">~1.–3.&nbsp;Jh.<small>Alexandria</small></div>
+        <div class="tl-body">
+          <h3>Maria die Jüdin und das Wasserbad</h3>
+          <p>Die alchemistische Schule Alexandrias beschreibt erste echte Apparaturen, etwa den
+             <i>Tribikos</i> mit drei Auffangrohren. Von Maria die Jüdin stammt das
+             <i>Balneum Mariae</i> — das Wasserbad, mit dem sich sanft und kontrolliert erhitzen
+             lässt. Der Heizpilz auf Stufe 3 ist sein direkter Nachfahre.</p>
         </div>
       </div>
-      <div class="chartbox" id="box-dens"></div>
-    </div>
-
-    <div class="chartcard">
-      <div class="chart-head">
-        <div class="t">
-          <h3>Alkoholgehalt der Destillate</h3>
-          <p>Aus der Dichte abgelesen. Das Spiegelbild der Dichtekurve — und die eigentliche
-             Antwort auf die Frage, ob die Trennung funktioniert hat.</p>
+      <div class="tl-item">
+        <div class="tl-year">~800–900<small>Persien / Bagdad</small></div>
+        <div class="tl-body">
+          <h3>Der Alembik — und der erste Alkohol</h3>
+          <p>Jabir ibn Hayyan perfektioniert den <i>al-anbīq</i> (daraus «Alembik»), einen
+             Destillierhelm mit gekühltem Ablaufrohr. Rund hundert Jahre später gewinnt
+             ar-Rāzī durch Destillation von Wein den Alkohol als eigenen Stoff. Auch das Wort
+             <b>Alkohol</b> stammt aus dem Arabischen (<i>al-kuhl</i>).</p>
         </div>
       </div>
-      <div class="chartbox" id="box-conc"></div>
-    </div>
-
-    <div class="tablewrap">
-      <div class="tablehead">
-        <h3>Tab. 1 — Messprotokoll</h3>
-        <button class="btn" id="tableToggle" type="button" aria-expanded="true">Tabelle ausblenden</button>
+      <div class="tl-item">
+        <div class="tl-year">12.&nbsp;Jh.<small>Salerno</small></div>
+        <div class="tl-body">
+          <h3>«Aqua vitae» — Wasser des Lebens</h3>
+          <p>An der Medizinschule von Salerno wird der destillierte Weingeist als Heilmittel
+             beschrieben. Aus <i>aqua vitae</i> werden später Eau de vie, Aquavit und Whisky
+             (<i>uisce beatha</i>) — allesamt derselbe Name.</p>
+        </div>
       </div>
-      <div class="tablescroll" id="tableScroll">
-        <table>
-          <caption class="sr-only">Kumuliertes Volumen, Temperatur, Dichte und Alkoholgehalt der 25 Destillate</caption>
-          <thead><tr>
-            <th scope="col">Nr.</th>
-            <th scope="col">V [mL]</th>
-            <th scope="col">T [°C]</th>
-            <th scope="col">ρ [g/mL]</th>
-            <th scope="col">σ [Vol-%]</th>
-          </tr></thead>
-          <tbody id="tbody"></tbody>
-          <tfoot><tr>
-            <th scope="row">Ø</th><td>50 gesamt</td><td id="fT">—</td><td id="fR">—</td><td id="fS">—</td>
-          </tr></tfoot>
-        </table>
+      <div class="tl-item">
+        <div class="tl-year">1500<small>Strassburg</small></div>
+        <div class="tl-body">
+          <h3>Das erste Destillier-Lehrbuch</h3>
+          <p>Hieronymus Brunschwig veröffentlicht das <i>Liber de arte distillandi</i> — reich
+             illustriert und in deutscher Sprache. Destillation wird vom Geheimwissen zum
+             Handwerk.</p>
+        </div>
       </div>
-      <p style="margin:0;padding:12px 20px 16px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border)">
-        ⚠ Fraktionen 1 und 16 ergeben 100 Vol-%. Wegen des Azeotrops bei ≈ 97 Vol-% ist das
-        nicht erreichbar — beide Werte sind Messfehler. Siehe Auswertung.
-      </p>
+      <div class="tl-item accent">
+        <div class="tl-year">1830<small>Dublin</small></div>
+        <div class="tl-body">
+          <h3>Die Kolonne macht Schluss mit dem Kolben</h3>
+          <p>Aeneas Coffey patentiert die kontinuierlich arbeitende Brennkolonne. Statt einmal
+             zu destillieren, wiederholt eine Kolonne den Verdampfungs-/Kondensationsschritt
+             hundertfach übereinander — das ist die <b>Rektifikation</b>, und genau der Schritt,
+             der unserer einfachen Apparatur fehlt.</p>
+        </div>
+      </div>
+      <div class="tl-item accent">
+        <div class="tl-year">heute<small>Industrie</small></div>
+        <div class="tl-body">
+          <h3>Vom Schnapsbrenner zur Raffinerie</h3>
+          <p>Dasselbe Prinzip trennt heute Rohöl in Benzin, Kerosin und Bitumen, gewinnt
+             Sauerstoff und Stickstoff aus verflüssigter Luft und macht aus vergorener Biomasse
+             Bioethanol. Die Destillationskolonnen einer Raffinerie sind 60 Meter hoch — der
+             Rundkolben in unserer Kapelle fasst 250 mL.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= AUSWERTUNG ================= -->
-<section id="auswertung">
+<!-- ================= POLITIK (Platzhalter) ================= -->
+<section id="politik">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">06</span>Interpretation</div>
-    <h2>Was die Kurven sagen</h2>
+    <div class="eyebrow"><span class="num">02</span>Fragestellung Geschichte &amp; Politik</div>
+    <h2>Folgt</h2>
+    <div class="soon">
+      <span class="k">Inhalt folgt</span>
+      <h3>Hier kommt die Beantwortung der geschichtlich-politischen Fragestellung hin</h3>
+      <p>Der Abschnitt ist angelegt und über die Navigation erreichbar. Sobald der Text steht,
+         wird er hier eingesetzt — im selben Aufbau wie der Chemie-Teil:</p>
+      <ul>
+        <li>Fragestellung</li>
+        <li>Quellen und Belege</li>
+        <li>Beantwortung der Fragestellung</li>
+        <li>Fazit</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <div class="findings">
-      <div class="finding">
-        <span class="q">Prinzip &amp; physikalische Grundlage</span>
-        <h3>Getrennt wird nach Flüchtigkeit, nicht nach «Alkohol» und «Wasser»</h3>
-        <p>Über einer Flüssigkeit stellt sich ein Dampf ein, dessen Zusammensetzung <i>nicht</i>
-          der Flüssigkeit entspricht: Die leichter flüchtige Komponente ist im Dampf angereichert.
-          Die zugrunde liegende Grösse ist die Siedetemperatur — bei uns 78.3 °C für Ethanol gegen
-          100 °C für Wasser. Weil der Dampf aber nie <i>nur</i> aus Ethanol besteht, ist eine
-          einfache Destillation eine Anreicherung und keine vollständige Trennung.</p>
-      </div>
+<!-- ================= TEIL 3 · ZUSAMMENFÜHRUNG ================= -->
+<section class="parthead pending" id="zusammenfuehrung">
+  <div class="wrap">
+    <span class="partlabel"><span class="dot"></span>Teil 3</span>
+    <h2>Zusammenführung der beiden Themen</h2>
+    <p class="lede">
+      Wo Chemie und Geschichte/Politik aufeinandertreffen — vom Siedepunkt im Rundkolben zur
+      gesellschaftlichen Wirkung der Destillation.
+    </p>
+  </div>
+</section>
 
-      <div class="finding">
-        <span class="q">Die beiden Reinstoffe</span>
-        <h3>Ethanol und Wasser</h3>
-        <p>Ethanol (C₂H₅OH): Siedetemperatur <b>78.3 °C</b>, Dichte <b>0.789 g/mL</b> bei 20 °C.
-          Wasser (H₂O): Siedetemperatur <b>100 °C</b>, Dichte <b>1.000 g/mL</b>.
-          Beide Werte tauchen in unseren Daten direkt auf: Die erste Fraktion misst 0.788 g/mL —
-          praktisch der Ethanolwert. Die letzte misst 0.970 g/mL und nähert sich Wasser.</p>
-      </div>
-
-      <div class="finding">
-        <span class="q">Die drei Diagramme im Vergleich</span>
-        <h3>Alle drei erzählen dieselbe Geschichte, nur in anderer Grösse</h3>
-        <p><b>Temperatur:</b> ein langes Plateau bei 78–79 °C über die ersten rund 30 mL. Solange
-          zwei Komponenten gemeinsam sieden, bleibt die Kopftemperatur beim Siedepunkt des
-          leichter flüchtigen Gemischs stehen. Ab etwa 42 mL steigt sie steil auf 93 °C — der
-          Kolbeninhalt ist jetzt so wasserreich, dass er erst bei höherer Temperatur siedet.</p>
-        <p><b>Dichte:</b> spiegelbildlich flach zwischen 0.833 und 0.846 g/mL, danach steiler
-          Anstieg auf 0.970 g/mL. <b>Alkoholgehalt:</b> exakt umgekehrt — hoch (85–90 Vol-%) im
-          Plateau, Absturz auf 24 Vol-% in der letzten Fraktion. Das ist zwingend so, weil σ
-          direkt aus ρ abgelesen wurde: mehr Wasser bedeutet höhere Dichte und tieferen Alkoholgehalt.</p>
-        <p><b>Fazit:</b> In den Destillaten 1–21 herrscht anteilsmässig klar <b>Ethanol</b> vor.
-          Erst ab Fraktion 23 (46 mL) dominiert Wasser. Die Temperaturkurve ist dabei der
-          Frühindikator — sie steigt schon an, bevor der Alkoholgehalt einbricht.</p>
-      </div>
-
-      <div class="finding warn">
-        <span class="q">Kumuliertes Volumen vs. Einsatz</span>
-        <h3>50 mL aus 50 mL — rechnerisch schön, praktisch unmöglich</h3>
-        <p>Die Tabelle ist so gebaut, dass 25 Fraktionen à 2 mL genau 50 mL ergeben. Eine
-          verlustfreie Destillation gibt es aber nicht. Real fehlen Volumen durch den
-          <b>Rückstand im Siedekolben</b> (Sumpf plus die nichtflüchtigen Farbstoffe), durch
-          <b>Benetzung</b> von Kolbenwand, Aufsatz und Kühlerrohr, durch <b>Dampfverluste</b> an
-          den Schliffen und durch die Reste in Pipette und Reagenzglas.</p>
-        <p>Gegenläufig wirkt ein Effekt, den man leicht übersieht: Ethanol und Wasser zeigen
-          <b>Volumenkontraktion</b>. 50 mL Gemisch enthalten mehr Einzelvolumen, als die Mischung
-          einnimmt — beim Trennen «gewinnt» man Volumen zurück. Dazu kommt, dass die 2-mL-Marke
-          von Auge angesetzt wurde; 25 kleine Abweichungen summieren sich. Dass die Bilanz genau
-          aufgeht, ist deshalb der Tabelle geschuldet, nicht der Messung.</p>
-      </div>
-
-      <div class="finding warn">
-        <span class="q">Mittelwert 83 Vol-% vs. Einsatz 70 Vol-%</span>
-        <h3>13 Prozentpunkte zu hoch — und dafür gibt es gute Gründe</h3>
-        <p>Weil alle Fraktionen gleich gross sind, ist das arithmetische Mittel zugleich das
-          volumengewichtete. Bei vollständiger, verlustfreier Destillation müsste es also die
-          70 Vol-% des Ansatzes reproduzieren. Es tut es nicht — aus zwei Klassen von Gründen:</p>
-        <p><b>Stofflich:</b> Es ging nicht das gesamte Wasser mit über. Was im Kolben zurückblieb,
-          war überwiegend Wasser. Fehlt aber Wasser in der Bilanz der aufgefangenen Fraktionen,
-          verschiebt sich deren Mittelwert nach oben.</p>
-        <p><b>Systematischer Messfehler — und der zeigt immer in dieselbe Richtung:</b> Ethanol
-          ist leichtflüchtig. Zwischen Pipettieren und Ablesen verdampft ein Teil der Probe, die
-          gewogene Masse wird zu klein, die berechnete Dichte zu klein — und aus zu kleiner Dichte
-          liest man einen zu <i>hohen</i> Alkoholgehalt ab. Dieselbe Richtung haben Luftblasen in
-          der Pipette und die Temperatur: Die Dichtetabelle gilt für 20 °C, unsere Destillate
-          waren beim Wägen wärmer und damit weniger dicht.</p>
-      </div>
-
-      <div class="finding ok">
-        <span class="q">Physikalische Obergrenze</span>
-        <h3>Zwei Messwerte von 100 Vol-% können nicht stimmen</h3>
-        <p>Ethanol und Wasser bilden bei rund 78.2 °C ein <b>Azeotrop</b>: Bei etwa 95.6 Massen-%
-          (≈ 97 Vol-%) Ethanol haben Dampf und Flüssigkeit dieselbe Zusammensetzung. Ab diesem
-          Punkt bringt weiteres Destillieren nichts mehr — reines Ethanol ist durch Destillation
-          grundsätzlich nicht erreichbar. Unsere Werte von 100 Vol-% bei den Fraktionen 1 und 16
-          sind daher Messfehler. Fraktion 16 verrät sich zusätzlich durch die Nachbarschaft: 0.791 g/mL
-          zwischen 0.842 und 0.833 g/mL ist ein Ausreisser, vermutlich ein Pipettier- oder Wägefehler.</p>
-        <p>Für wasserfreies Ethanol braucht die Industrie deshalb andere Verfahren —
-          Schleppmittel-Destillation oder Molekularsiebe. Genau hier hört die Destillation auf.</p>
-      </div>
-
-      <div class="finding ok">
-        <span class="q">Antwort auf die Ausgangsfrage</span>
-        <h3>Die Trennung funktioniert — aber sie reichert nur an</h3>
-        <p>Aus 70 Vol-% Einsatz wurden Destillate mit über 85 Vol-% in den ersten zwei Dritteln
-          und ein wasserreicher Rest am Schluss. Der Alkohol wurde also deutlich angereichert,
-          der Sumpf im Kolben entsprechend abgereichert. Wer reineres Ethanol will, müsste die
-          ersten Fraktionen sammeln und erneut destillieren — oder gleich eine Kolonne verwenden,
-          die genau das hundertfach übereinander tut.</p>
-      </div>
+<section id="zusammenfuehrung-inhalt">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span>Zusammenführung</div>
+    <h2>Folgt</h2>
+    <div class="soon">
+      <span class="k">Inhalt folgt</span>
+      <h3>Hier wird der Bogen zwischen beiden Projektteilen geschlagen</h3>
+      <p>Der Abschnitt ist angelegt und über die Navigation erreichbar. Sobald Teil 1 und Teil 2
+         beide stehen, kommt hier die Verbindung der beiden Fragestellungen hin.</p>
     </div>
   </div>
 </section>
@@ -1059,7 +1297,8 @@ footer li{margin-bottom:3px}
 <footer>
   <div class="wrap">
     <div style="flex:1 1 320px">
-      <b>Chemie-Praktikum · Versuch 01 — Destillation</b><br>
+      <b>Projektarbeit Destillation</b><br>
+      Chemie · Geschichte &amp; Politik<br>
       Laurin Antz · Janis von Allmen · Laurin Zoss<br>
       Berufsmaturität, Fachgruppe Chemie
     </div>
