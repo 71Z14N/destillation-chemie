@@ -565,6 +565,23 @@ h1.qh1 em.e{color:var(--p-eth)}
   .sources .src{grid-column:2}
 }
 
+/* Fragestellung als Teil-Überschrift */
+.parthead h2.qh2{font-size:clamp(1.5rem,3.1vw,2.12rem);max-width:31ch;letter-spacing:-.026em}
+
+/* Bibliographie-Variante des Quellenverzeichnisses */
+.sources.bib li{grid-template-columns:minmax(0,1fr);gap:0;padding:17px 22px}
+.sources.bib li::before{content:none}
+.sources.bib li:target{background:color-mix(in srgb,var(--s-dens) 9%,var(--surface))}
+.sources.bib .cite{font-size:.94rem;line-height:1.6;color:var(--ink)}
+.sources.bib .cite i{font-style:italic}
+.sources.bib .cite a{word-break:break-word}
+.sources.bib .cite small{display:block;margin-top:5px;font-size:.79rem;color:var(--muted)}
+
+/* Belegverweise im Fliesstext */
+.answer .ref{white-space:nowrap;font-size:.92em;color:var(--ink-2)}
+.answer .ref a{text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--s-dens) 45%,transparent)}
+.answer .ref a:hover{border-bottom-color:var(--s-dens)}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
@@ -580,6 +597,7 @@ h1.qh1 em.e{color:var(--p-eth)}
       <a href="#geschichte">Geschichte &amp; Politik</a>
       <a href="#quellen">Quellen</a>
       <a href="#zusammenfuehrung">Zusammenführung</a>
+      <a href="#ki-nutzung">KI-Nutzung</a>
     </nav>
     <button class="themebtn" id="themebtn" type="button" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel umschalten">◐</button>
   </div>
@@ -643,17 +661,17 @@ h1.qh1 em.e{color:var(--p-eth)}
         <p>Durchführung, Messprotokoll, Diagramme, die Antwort auf die Fragestellung und das
            Teilchenmodell als interaktive Animation.</p>
       </a>
-      <a class="ovcard pending" href="#geschichte">
-        <div class="k">Teil 2 · in Arbeit</div>
+      <a class="ovcard" href="#geschichte">
+        <div class="k">Teil 2</div>
         <h3>Geschichte &amp; Politik</h3>
-        <p>Fünftausend Jahre Apparatebau — die Zeitleiste steht. Die Beantwortung der
-           geschichtlich-politischen Fragestellung folgt.</p>
+        <p>Wie im 18.&nbsp;Jahrhundert destilliert wurde und was das für die Alkoholherstellung
+           bedeutete — mit Zeitleiste und Quellenverzeichnis.</p>
       </a>
-      <a class="ovcard pending" href="#zusammenfuehrung">
-        <div class="k">Teil 3 · in Arbeit</div>
+      <a class="ovcard" href="#zusammenfuehrung">
+        <div class="k">Teil 3</div>
         <h3>Zusammenführung</h3>
-        <p>Was die beiden Themen miteinander zu tun haben — vom Laborversuch zur
-           gesellschaftlichen Wirkung der Destillation.</p>
+        <p>Was unsere Messwerte mit Lavoisiers Serpentin zu tun haben — und welche Fragen
+           daraus für eine weiterführende Arbeit entstehen.</p>
       </a>
     </div>
   </div>
@@ -1174,13 +1192,13 @@ h1.qh1 em.e{color:var(--p-eth)}
 </section>
 
 <!-- ================= TEIL 2 · GESCHICHTE & POLITIK ================= -->
-<section class="parthead pending" id="geschichte">
+<section class="parthead" id="geschichte">
   <div class="wrap">
     <span class="partlabel"><span class="dot"></span>Teil 2</span>
-    <h2>Beantwortung der Fragestellung Geschichte &amp; Politik</h2>
+    <h2 class="qh2">Wie wurde die Destillation im 18.&nbsp;Jahrhundert technisch durchgeführt und welche Bedeutung hatte sie für die Herstellung von Alkohol?</h2>
     <p class="lede">
-      Die Destillation ist nicht nur ein Laborverfahren — sie hat Handel, Gesetzgebung und
-      Gesellschaft geprägt. Die Zeitleiste steht, die Beantwortung der Fragestellung folgt.
+      Das ist die Fragestellung des geschichtlich-politischen Teils. Zuerst der lange Weg bis
+      dorthin als Zeitleiste, danach die Beantwortung anhand zeitgenössischer und moderner Quellen.
     </p>
   </div>
 </section>
@@ -1267,22 +1285,101 @@ h1.qh1 em.e{color:var(--p-eth)}
   </div>
 </section>
 
-<!-- ================= POLITIK (Platzhalter) ================= -->
-<section id="politik">
+<!-- ================= BEANTWORTUNG GESCHICHTE ================= -->
+<section id="geschichte-antwort">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span>Fragestellung Geschichte &amp; Politik</div>
-    <h2>Folgt</h2>
-    <div class="soon">
-      <span class="k">Inhalt folgt</span>
-      <h3>Hier kommt die Beantwortung der geschichtlich-politischen Fragestellung hin</h3>
-      <p>Der Abschnitt ist angelegt und über die Navigation erreichbar. Sobald der Text steht,
-         wird er hier eingesetzt — im selben Aufbau wie der Chemie-Teil:</p>
-      <ul>
-        <li>Fragestellung</li>
-        <li>Quellen und Belege</li>
-        <li>Beantwortung der Fragestellung</li>
-        <li>Fazit</li>
-      </ul>
+    <div class="eyebrow"><span class="num">02</span>Beantwortung der Fragestellung</div>
+    <h2>Die Destillation im 18.&nbsp;Jahrhundert</h2>
+
+    <div class="answer">
+      <p>Die Destillation ist ein Verfahren, mit dem Stoffgemische aufgrund ihrer
+        unterschiedlichen <b>Flüchtigkeit</b> getrennt werden können. Bereits im Mittelalter
+        wurde sie in Europa eingesetzt, beispielsweise zur Herstellung von Rosenwasser,
+        Arzneimitteln und später auch Alkohol. Im Laufe der Zeit wurden die
+        Destillationsapparate technisch weiterentwickelt. Besonders im 18.&nbsp;Jahrhundert war
+        die Destillation bereits ein wichtiges Verfahren für die Herstellung von Spirituosen.
+        Die Frage, wie die Destillation im 18.&nbsp;Jahrhundert technisch durchgeführt wurde und
+        welche Bedeutung sie für die Herstellung von Alkohol hatte, lässt sich anhand
+        zeitgenössischer und moderner Quellen untersuchen.</p>
+
+      <h3>Von der Alchemie zum Alkohol</h3>
+      <p>Laut CHEMIE.DE war die Chemie im Mittelalter stark von der <b>Alchemie</b> geprägt.
+        Viele Kenntnisse über chemische Verfahren gelangten über den arabischen Raum nach Europa.
+        Die Destillation wurde zunächst vor allem zur Herstellung von Heilmitteln, Duftstoffen
+        und Ölen verwendet. Später wurde sie auch für die Herstellung von Alkohol eingesetzt.
+        Dabei konnte der Alkoholgehalt einer vergorenen Flüssigkeit durch Destillation erhöht
+        werden. Die Destillation entwickelte sich somit von einem eher handwerklichen Verfahren
+        zu einer Technik, die auch für die Herstellung alkoholischer Getränke immer wichtiger
+        wurde. (<span class="ref"><a href="#q-chemie-de">CHEMIE.DE [Hrsg.] 2026</a></span>)</p>
+
+      <h3>Der Alambik und die Verbesserung der Apparaturen</h3>
+      <p>Eine wichtige Entwicklung war die Verbesserung der verwendeten Apparaturen. Zu den
+        wichtigsten Geräten gehörte der <b>Alambik</b>. Eine Flüssigkeit wurde dabei erhitzt,
+        wodurch Dämpfe entstanden. Diese wurden durch Leitungen in einen anderen Teil der
+        Apparatur geführt und dort wieder abgekühlt. Dadurch kondensierten die Dämpfe und konnten
+        als Destillat aufgefangen werden. Norbert Kockmann beschreibt, dass sich die Destillation
+        besonders zwischen dem 17.&nbsp;und 18.&nbsp;Jahrhundert technisch weiterentwickelte. Die
+        Apparaturen wurden verbessert und die Destillation gewann zunehmend auch für industrielle
+        Anwendungen an Bedeutung. Gleichzeitig stieg die Nachfrage nach destillierten Produkten,
+        darunter alkoholische Getränke. (<span class="ref"><a href="#q-kockmann">Kockmann 2014</a></span>)</p>
+
+      <h3>Was Lavoisier 1789 beschreibt</h3>
+      <p>Eine besonders wichtige <b>Primärquelle</b> für die Untersuchung des 18.&nbsp;Jahrhunderts
+        ist das Werk <i>Traité élémentaire de chimie</i> des französischen Chemikers
+        Antoine-Laurent de Lavoisier aus dem Jahr 1789. Lavoisier beschreibt darin verschiedene
+        chemische Verfahren und Apparaturen. Einen eigenen Abschnitt widmet er der
+        «Distillation simple», also der einfachen Destillation. Dieser Abschnitt beginnt auf
+        Seite&nbsp;442. (<span class="ref"><a href="#q-lavoisier">Lavoisier 1789, S.&nbsp;442</a></span>)</p>
+      <p>Lavoisiers Beschreibung zeigt, dass die Destillation im 18.&nbsp;Jahrhundert bereits mit
+        relativ komplexen Apparaturen durchgeführt wurde. Er beschreibt unter anderem einen
+        Alambik, verschiedene Gefässe sowie Vorrichtungen zum Abkühlen der entstehenden Dämpfe.
+        Für bestimmte Destillationen empfiehlt er Apparaturen aus Metall. Dabei erwähnt er
+        ausdrücklich die Destillation von «liqueurs spiritueuses», also alkoholischen
+        Flüssigkeiten. (<span class="ref"><a href="#q-lavoisier">Lavoisier 1789, S.&nbsp;445</a></span>)</p>
+
+      <h3>Die Kühlung als Schlüssel: <i>réfrigérent</i> und <i>serpentin</i></h3>
+      <p>Besonders wichtig war die <b>Kühlung</b>. Beim Erhitzen der Flüssigkeit entstehen Dämpfe,
+        die anschliessend wieder in eine Flüssigkeit umgewandelt werden müssen. Lavoisier
+        beschreibt dafür einen sogenannten «réfrigérent», einen Kühler, der mit Wasser gefüllt
+        wurde. Erwärmte sich das Wasser, musste es durch kaltes Wasser ersetzt werden. Dadurch
+        konnten die Dämpfe abgekühlt und wieder verflüssigt werden.
+        (<span class="ref"><a href="#q-lavoisier">Lavoisier 1789, S.&nbsp;445–446</a></span>)</p>
+      <p>Für die Herstellung von Alkohol beschreibt Lavoisier zusätzlich einen «serpentin». Dabei
+        handelt es sich um ein <b>spiralförmig gewundenes Rohr</b>, das von Wasser umgeben ist.
+        Durch diese Konstruktion konnte die Oberfläche vergrössert werden, an der die
+        Alkoholdämpfe abgekühlt wurden. Lavoisier erwähnt ausdrücklich, dass solche Vorrichtungen
+        bei der Herstellung von «eau-de-vie», also Branntwein, verwendet wurden. Diese
+        Beschreibung zeigt, dass die Destillation im 18.&nbsp;Jahrhundert bereits gezielt zur
+        Herstellung alkoholischer Produkte eingesetzt wurde. (<span class="ref"><a href="#q-lavoisier">Lavoisier 1789, S.&nbsp;446–447</a></span>)</p>
+
+      <h3>Bedeutung für die Alkoholproduktion</h3>
+      <p>Die technische Entwicklung hatte deshalb eine grosse Bedeutung für die Alkoholproduktion.
+        Durch eine bessere Kühlung konnten mehr Alkoholdämpfe kondensiert werden, wodurch weniger
+        Alkohol verloren ging. Gleichzeitig konnte der Alkoholgehalt der gewonnenen Flüssigkeit
+        erhöht werden. Destillation ermöglichte damit die Herstellung von <b>konzentrierten
+        Spirituosen</b> und wurde zu einem wichtigen Bestandteil der Alkoholproduktion.</p>
+      <p>Auch die zunehmende wissenschaftliche Untersuchung der Destillation spielte eine wichtige
+        Rolle. Lavoisier beschrieb nicht nur die Apparaturen, sondern beschäftigte sich auch mit
+        der genauen <b>Messung von Stoffeigenschaften</b>. In seinem Werk finden sich
+        beispielsweise Angaben zur Dichte von Flüssigkeiten und zu Alkohol. Dadurch wurde die
+        Destillation nicht mehr nur als handwerkliches Verfahren betrachtet, sondern zunehmend
+        wissenschaftlich untersucht. (<span class="ref"><a href="#q-lavoisier">Lavoisier 1789, S.&nbsp;337–340</a></span>)</p>
+    </div>
+
+    <div class="findings" style="margin-top:34px">
+      <div class="finding ok">
+        <span class="q">Fazit</span>
+        <h3>Technisch weit entwickelt — und die Grundlage für alles Spätere</h3>
+        <p>Zusammenfassend lässt sich sagen, dass die Destillation im 18.&nbsp;Jahrhundert
+          technisch bereits weit entwickelt war. Das Grundprinzip — Erhitzen, Verdampfen,
+          Abkühlen und Kondensieren — war zwar schon früher bekannt, doch die Apparaturen wurden
+          immer effizienter. Besonders verbesserte Kühlsysteme wie der <b>Serpentin</b> waren für
+          die Herstellung von Alkohol von grosser Bedeutung.</p>
+        <p>Die Destillation ermöglichte die Gewinnung konzentrierter Spirituosen und wurde dadurch
+          sowohl wirtschaftlich als auch wissenschaftlich immer wichtiger. Der Text zeigt somit,
+          dass die technischen Verbesserungen des 18.&nbsp;Jahrhunderts eine wichtige Grundlage
+          für die spätere industrielle Entwicklung der Destillation bildeten.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1291,82 +1388,70 @@ h1.qh1 em.e{color:var(--p-eth)}
 <section id="quellen">
   <div class="wrap">
     <div class="eyebrow"><span class="num">03</span>Quellenverzeichnis</div>
-    <h2>Woher die Angaben stammen</h2>
+    <h2>Bibliographie</h2>
     <p class="lede">
-      Jede Aussage auf dieser Seite, die nicht aus unserer eigenen Messung stammt, ist hier
-      aufgeführt und wird im Text mit ihrer Nummer belegt.
+      Alle im Geschichtsteil verwendeten Quellen. Die Belege im Fliesstext sind mit dem
+      jeweiligen Eintrag verlinkt.
     </p>
 
+    <div class="srcgroup">
+      <span class="k">Primärquelle</span>
+      <ol class="sources bib">
+        <li id="q-lavoisier">
+          <div class="cite">
+            Lavoisier, Antoine-Laurent de. 1789. <i>Traité élémentaire de chimie.</i>
+            <a href="https://www.gutenberg.org/files/52488/52488-h/52488-h.htm"
+               target="_blank" rel="noopener noreferrer">gutenberg.org/files/52488/52488-h/52488-h.htm</a>
+            <small>Stand: 31.08.2026</small>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="srcgroup">
+      <span class="k">Sekundärquellen</span>
+      <ol class="sources bib">
+        <li id="q-chemie-de">
+          <div class="cite">
+            CHEMIE.DE (Hrsg.). 2026. <i>Chemie im Mittelalter.</i>
+            <a href="https://www.chemie.de/lexikon/Chemie+im+Mittelalter.html"
+               target="_blank" rel="noopener noreferrer">chemie.de/lexikon/Chemie+im+Mittelalter.html</a>
+            <small>Stand: 31.08.2026</small>
+          </div>
+        </li>
+        <li id="q-kockmann">
+          <div class="cite">
+            Kockmann, Norbert. 2014. <i>Distillation: Fundamentals and Principles.</i>
+            <a href="https://skoge.folk.ntnu.no/puublications_others/books/Gorak-2014-Distillation_Fundamentals_and_Principles.pdf"
+               target="_blank" rel="noopener noreferrer">skoge.folk.ntnu.no/…/Gorak-2014-Distillation_Fundamentals_and_Principles.pdf</a>
+            <small>Stand: 31.08.2026</small>
+          </div>
+        </li>
+      </ol>
+    </div>
+
     <div class="soon">
-      <span class="k">Auszufüllen</span>
-      <h3>Die Belege müssen noch eingetragen werden</h3>
-      <p>Unten steht jede belegpflichtige Angabe der Seite mit einem leeren Feld für die Quelle.
-         Format einheitlich halten:</p>
+      <span class="k">Noch ohne Beleg</span>
+      <h3>Diese Angaben stützen sich noch auf keine der obigen Quellen</h3>
+      <p>Die drei Quellen decken den Text zum 18.&nbsp;Jahrhundert ab. Belege fehlen bisher für:</p>
       <ul>
-        <li><b>Buch:</b> Nachname, Vorname: <i>Titel</i>. Verlag, Ort Jahr, S.&nbsp;xx.</li>
-        <li><b>Website:</b> Herausgeber: <i>Titel der Seite</i>. URL (abgerufen am TT.MM.JJJJ).</li>
-        <li><b>Unterricht:</b> Praktikumsskript / Lehrmittel, Kapitel und Seite.</li>
+        <li><b>Die Zeitleiste</b> (Abschnitt&nbsp;01) — Tepe Gawra, Maria die Jüdin, Jabir ibn
+            Hayyan und ar-Rāzī, Salerno, Brunschwig 1500, Coffey 1830.</li>
+        <li><b>Die chemischen Kennwerte</b> — Siedetemperaturen, Dichten, Azeotrop-Zusammensetzung
+            sowie die Dichtetabelle, aus der alle σ-Werte des Messprotokolls stammen.</li>
       </ul>
-    </div>
-
-    <div class="srcgroup">
-      <span class="k">Geschichte &amp; Politik</span>
-      <ol class="sources">
-      <li>
-        <div class="claim">Tongefässe aus Tepe Gawra als früheste Destillationsgeräte<small>~3500 v.&nbsp;Chr., Mesopotamien</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Tribikos, Maria die Jüdin und das <i>Balneum Mariae</i><small>1.–3.&nbsp;Jh., Alexandria</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Jabir ibn Hayyan und der <i>al-anbīq</i>; ar-Rāzī gewinnt Alkohol aus Wein; Wortherkunft <i>al-kuhl</i><small>~800–900, Persien&nbsp;/&nbsp;Bagdad</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim"><i>Aqua vitae</i> als Heilmittel an der Schule von Salerno; Wortverwandtschaft zu Eau&nbsp;de&nbsp;vie, Aquavit und <i>uisce beatha</i><small>12.&nbsp;Jh., Salerno</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Hieronymus Brunschwig, <i>Liber de arte distillandi</i><small>Strassburg 1500</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Aeneas Coffey patentiert die kontinuierliche Brennkolonne (Rektifikation)<small>Dublin 1830</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Heutige Anwendungen: Rohöldestillation, Luftzerlegung, Bioethanol; Höhe industrieller Kolonnen<small>Abschnitt «Vom Schnapsbrenner zur Raffinerie»</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      </ol>
-    </div>
-
-    <div class="srcgroup">
-      <span class="k">Chemische Kennwerte</span>
-      <ol class="sources">
-      <li>
-        <div class="claim">Siedetemperaturen und Dichten von Ethanol und Wasser; Azeotrop bei ≈&nbsp;95.6&nbsp;Massen-%<small>Kennwerte in Abschnitt 1.1 und im Fussbereich</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      <li>
-        <div class="claim">Dichtetabelle zur Umrechnung von ρ in den Volumenanteil σ<small>Grundlage aller σ-Werte im Messprotokoll</small></div>
-        <div class="src todo">Quelle eintragen</div>
-      </li>
-      </ol>
     </div>
   </div>
 </section>
 
 <!-- ================= TEIL 3 · ZUSAMMENFÜHRUNG ================= -->
-<section class="parthead pending" id="zusammenfuehrung">
+<section class="parthead" id="zusammenfuehrung">
   <div class="wrap">
     <span class="partlabel"><span class="dot"></span>Teil 3</span>
     <h2>Zusammenführung der beiden Themen</h2>
     <p class="lede">
-      Wo Chemie und Geschichte/Politik aufeinandertreffen — vom Siedepunkt im Rundkolben zur
-      gesellschaftlichen Wirkung der Destillation.
+      Wo Chemie und Geschichte aufeinandertreffen — vom Siedepunkt im Rundkolben zur technischen
+      Entwicklung, die aus diesem Prinzip ein Gewerbe gemacht hat.
     </p>
   </div>
 </section>
@@ -1374,12 +1459,84 @@ h1.qh1 em.e{color:var(--p-eth)}
 <section id="zusammenfuehrung-inhalt">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span>Zusammenführung</div>
-    <h2>Folgt</h2>
-    <div class="soon">
-      <span class="k">Inhalt folgt</span>
-      <h3>Hier wird der Bogen zwischen beiden Projektteilen geschlagen</h3>
-      <p>Der Abschnitt ist angelegt und über die Navigation erreichbar. Sobald Teil 1 und Teil 2
-         beide stehen, kommt hier die Verbindung der beiden Fragestellungen hin.</p>
+    <h2>Verknüpfung der beiden Fachbereiche</h2>
+
+    <div class="answer">
+      <p>Die Ergebnisse aus Chemie und Geschichte zeigen, dass die Destillation nicht nur ein
+        chemisches Trennverfahren ist, sondern auch eine wichtige <b>technische und historische
+        Entwicklung</b> darstellt. Im Chemie-Experiment konnten wir beobachten, wie sich ein
+        Gemisch aus Ethanol und Wasser durch unterschiedliche Siedepunkte teilweise trennen lässt.
+        Ethanol besitzt mit 78.3&nbsp;°C einen niedrigeren Siedepunkt als Wasser mit 100&nbsp;°C
+        und verdampft deshalb stärker. Dadurch enthielten unsere ersten Destillate deutlich mehr
+        Ethanol, während der Wasseranteil in den späteren Destillaten zunahm. Unsere
+        <a href="#daten">Messwerte</a> zu Temperatur, Dichte und Alkoholgehalt bestätigten diesen
+        Zusammenhang.</p>
+
+      <h3>Dasselbe Prinzip, zweihundert Jahre auseinander</h3>
+      <p>Diese Erkenntnisse lassen sich direkt mit der historischen Entwicklung der Destillation
+        im 18.&nbsp;Jahrhundert verbinden. Das grundlegende chemische Prinzip — Erhitzen,
+        Verdampfen, Abkühlen und Kondensieren — war bereits früher bekannt. Im 17.&nbsp;und
+        besonders im 18.&nbsp;Jahrhundert wurden jedoch die Apparaturen weiterentwickelt.
+        <a href="#q-lavoisier">Lavoisiers</a> Beschreibung des Alambiks, des Kühlers und des
+        spiralförmigen «Serpentin» zeigt, dass bereits damals gezielt daran gearbeitet wurde,
+        Dämpfe effizienter abzukühlen und möglichst viel Destillat aufzufangen. Genau dieser
+        Prozess war auch bei unserem Experiment entscheidend: Ohne Erhitzen würden keine Dämpfe
+        entstehen und ohne Kühlung könnten diese nicht wieder als Flüssigkeit aufgefangen werden.</p>
+
+      <h3>Was eine weiterführende Arbeit untersuchen könnte</h3>
+      <p>Eine weiterführende Arbeit könnte deshalb untersuchen, wie technische Verbesserungen der
+        Destillationsapparaturen die chemischen Möglichkeiten und die Herstellung von Alkohol
+        beeinflussten. Dabei könnte man historische Apparaturen aus dem 18.&nbsp;Jahrhundert mit
+        einem modernen Destillationsaufbau vergleichen. Interessant wäre beispielsweise die Frage,
+        wie sich die <b>Form des Kühlers</b> auf die Effizienz der Kondensation auswirkt und
+        weshalb dadurch weniger Alkohol verloren geht. Zusätzlich könnte untersucht werden, welche
+        <b>wirtschaftliche Bedeutung</b> die Herstellung konzentrierter Spirituosen im
+        18.&nbsp;Jahrhundert hatte und wie die zunehmende wissenschaftliche Untersuchung der
+        Destillation zur späteren Industrialisierung beitrug.</p>
+    </div>
+
+    <div class="findings" style="margin-top:34px">
+      <div class="finding ok">
+        <span class="q">Fazit</span>
+        <h3>Chemie und Geschichte ergänzen sich gegenseitig</h3>
+        <p>Damit wird deutlich, dass Chemie und Geschichte sich gegenseitig ergänzen: Die
+          <b>Chemie erklärt, warum</b> die Trennung von Ethanol und Wasser funktioniert, während
+          die <b>Geschichte zeigt, wie und warum</b> diese Erkenntnisse technisch genutzt und
+          weiterentwickelt wurden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KI-NUTZUNG ================= -->
+<section id="ki-nutzung">
+  <div class="wrap">
+    <div class="eyebrow">Transparenz</div>
+    <h2>KI-Nutzung</h2>
+
+    <div class="answer">
+      <p>Bei der Erstellung unserer Website haben wir <b>Künstliche Intelligenz (KI)</b> in
+        verschiedenen Bereichen eingesetzt. Ein wichtiger Einsatzbereich war die Programmierung
+        der Website. Wir haben KI genutzt, um uns beim Schreiben und Überarbeiten des Codes zu
+        unterstützen.</p>
+
+      <h3>Recherche</h3>
+      <p>Zusätzlich haben wir KI für die Recherche verwendet. Sie half uns dabei, Informationen zu
+        verschiedenen Themen zu finden, Suchbegriffe zu formulieren und geeignete Quellen zu
+        identifizieren. Die von der KI vorgeschlagenen Informationen und Quellen haben wir
+        anschliessend <b>selbst überprüft</b> und nicht ungeprüft übernommen.</p>
+
+      <h3>Texte</h3>
+      <p>Auch bei unseren Texten kam KI zum Einsatz. Wir haben sie beispielsweise verwendet, um
+        Formulierungen zu verbessern, Texte verständlicher zu machen und Rechtschreib- oder
+        Grammatikfehler zu korrigieren. Die endgültigen Texte wurden von uns überarbeitet und an
+        unsere Website angepasst.</p>
+
+      <h3>Kritische Prüfung</h3>
+      <p>Uns war wichtig, die Inhalte der KI <b>kritisch zu prüfen</b>. Wir haben Vorschläge nicht
+        einfach übernommen, sondern die Informationen mit anderen Quellen verglichen und die Texte
+        sowie den Programmcode selbst kontrolliert. Die KI diente somit vor allem als
+        Unterstützung und nicht als Ersatz für unsere eigene Arbeit.</p>
     </div>
   </div>
 </section>
