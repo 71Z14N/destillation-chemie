@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Die Destillation im 18. Jahrhundert — Projektarbeit Chemie, Geschichte &amp; Politik</title>
-<meta name="description" content="Wie wurde die Destillation im 18. Jahrhundert technisch durchgeführt und welche Bedeutung hatte sie für die Herstellung von Alkohol? Projektarbeit mit eigenem Destillationsversuch, Messdaten, Teilchenmodell-Animation und Quellenarbeit zu Lavoisier.">
+<title>Interdisziplinäres Arbeiten — Destillation · Chemie und Geschichte und Politik</title>
+<meta name="description" content="Interdisziplinäre Projektarbeit in Chemie und Geschichte und Politik zum Thema Destillation: eigener Destillationsversuch mit Messdaten und Teilchenmodell-Animation sowie Quellenarbeit zur Destillationstechnik des 18. Jahrhunderts bei Lavoisier.">
 <style>
 /* ============================================================
    Farb-Tokens — Referenzpalette (Slots 1–3 kategorial)
@@ -168,6 +168,7 @@ section:first-of-type{border-top:none}
 h1{font-size:clamp(2.3rem,6.4vw,4.05rem);font-weight:700;letter-spacing:-.038em;max-width:17ch}
 h1 em{font-style:normal;color:var(--s-dens)}
 .hero .lede{font-size:clamp(1.05rem,1.9vw,1.24rem);max-width:60ch;margin-top:22px}
+.subtitle + .lede{margin-top:18px}
 .authors{
   display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;
 }
@@ -233,33 +234,6 @@ h1 em{font-style:normal;color:var(--s-dens)}
 .pure dt{color:var(--muted)}
 .pure dd{margin:0;font-variant-numeric:tabular-nums;color:var(--ink-2)}
 @media (max-width:620px){ .pure{grid-template-columns:1fr} }
-
-/* ============================================================
-   Zeitstrahl Geschichte
-   ============================================================ */
-.timeline{margin-top:38px;position:relative;padding-left:0}
-.tl-item{display:grid;grid-template-columns:132px 1fr;gap:26px;position:relative;padding:0 0 30px}
-.tl-item:last-child{padding-bottom:0}
-.tl-year{
-  text-align:right;font-variant-numeric:tabular-nums;font-weight:640;font-size:.95rem;
-  color:var(--ink);padding-top:1px;letter-spacing:-.01em;
-}
-.tl-year small{display:block;font-weight:450;color:var(--muted);font-size:.76rem;letter-spacing:0}
-.tl-body{position:relative;padding-left:28px;border-left:1px solid var(--border);padding-bottom:2px}
-.tl-item:last-child .tl-body{border-left-color:transparent}
-.tl-body::before{
-  content:"";position:absolute;left:-4.5px;top:8px;width:9px;height:9px;border-radius:50%;
-  background:var(--s-dens);box-shadow:0 0 0 3px var(--page);
-}
-.tl-item.accent .tl-body::before{background:var(--s-temp)}
-.tl-body h3{margin-bottom:5px}
-.tl-body p{margin:0;font-size:.94rem;color:var(--ink-2);max-width:62ch}
-@media (max-width:620px){
-  .tl-item{grid-template-columns:1fr;gap:4px}
-  .tl-year{text-align:left}
-  .tl-year small{display:inline;margin-left:8px}
-  .tl-body{padding-left:20px;margin-left:4px}
-}
 
 /* ============================================================
    Animation / Apparatur
@@ -467,9 +441,8 @@ footer li{margin-bottom:3px}
 .parthead.pending .partlabel .dot{background:var(--muted)}
 
 /* Fragestellung im Titel */
-h1.qh1{font-size:clamp(1.7rem,3.7vw,2.6rem);max-width:27ch;letter-spacing:-.028em;line-height:1.18}
-h1.qh1 em.w{color:var(--p-wat)}
-h1.qh1 em.e{color:var(--p-eth)}
+.subtitle{margin:16px 0 0;font-size:clamp(1.15rem,2.5vw,1.55rem);font-weight:560;
+  color:var(--ink-2);letter-spacing:-.016em;line-height:1.3}
 
 /* Wegweiser auf der Startseite */
 .overview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
@@ -521,18 +494,6 @@ h1.qh1 em.e{color:var(--p-eth)}
 .answer h3:first-child{margin-top:0}
 .answer p{margin:0 0 .95em;font-size:1rem;color:var(--ink-2)}
 .answer b{color:var(--ink);font-weight:600}
-
-/* Platzhalter für noch fehlende Inhalte */
-.soon{
-  margin-top:30px;border:1px dashed var(--border-strong);border-radius:16px;
-  padding:26px 28px;background:var(--surface-2);
-}
-.soon .k{font-size:.72rem;font-weight:660;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--s-temp);display:block;margin-bottom:9px}
-.soon h3{margin-bottom:8px}
-.soon p{margin:0;font-size:.94rem;color:var(--ink-2);max-width:64ch}
-.soon ul{margin:12px 0 0;padding-left:19px;font-size:.92rem;color:var(--ink-2)}
-.soon li{margin-bottom:4px}
 
 /* Quellenverzeichnis */
 .srcgroup{margin-top:34px}
@@ -595,7 +556,7 @@ h1.qh1 em.e{color:var(--p-eth)}
       <a href="#start">Fragestellung</a>
       <a href="#chemie">Chemie</a>
       <a href="#geschichte">Geschichte &amp; Politik</a>
-      <a href="#quellen">Quellen</a>
+      <a href="#quellen">Verzeichnisse</a>
       <a href="#zusammenfuehrung">Zusammenführung</a>
       <a href="#ki-nutzung">KI-Nutzung</a>
     </nav>
@@ -608,13 +569,15 @@ h1.qh1 em.e{color:var(--p-eth)}
 <!-- ================= START / FRAGESTELLUNG ================= -->
 <section class="hero" id="start">
   <div class="wrap">
-    <span class="tag"><span class="dot"></span>Projektarbeit · Chemie · Geschichte &amp; Politik</span>
-    <h1 class="qh1">Wie wurde die <em>Destillation</em> im 18.&nbsp;Jahrhundert technisch durchgeführt und welche Bedeutung hatte sie für die Herstellung von <em class="e">Alkohol</em>?</h1>
+    <span class="tag"><span class="dot"></span>Projektarbeit · Destillation</span>
+    <h1>Interdisziplinäres Arbeiten</h1>
+    <p class="subtitle">Chemie und Geschichte und Politik</p>
     <p class="lede">
-      Das ist die Leitfrage unserer Projektarbeit. Wir gehen sie von zwei Seiten an: im Labor mit
-      einer eigenen Destillation von 50 mL Alkohol/Wasser-Gemisch (70 Vol-%), deren 25 Fraktionen
-      wir einzeln vermessen haben — und in den Quellen des 18.&nbsp;Jahrhunderts, allen voran bei
-      Lavoisier. Am Schluss führen wir beides zusammen.
+      Unser Thema ist die <b>Destillation</b> — und wir gehen sie von zwei Seiten an. Im Labor
+      haben wir 50 mL eines Alkohol/Wasser-Gemischs (70 Vol-%) destilliert und die 25
+      aufgefangenen Fraktionen einzeln vermessen. In den Quellen des 18.&nbsp;Jahrhunderts,
+      allen voran bei Lavoisier, haben wir untersucht, wie damals technisch destilliert wurde.
+      Am Schluss führen wir beides zusammen.
     </p>
 
     <div class="authors">
@@ -630,29 +593,6 @@ h1.qh1 em.e{color:var(--p-eth)}
       <span><b>Fraktionen</b> 25 × 2 mL</span>
     </div>
 
-    <div class="figs">
-      <div class="fig hero-fig">
-        <div class="lab">Mittelwert Alkoholgehalt der Destillate</div>
-        <div class="val">83<span class="u">Vol-%</span></div>
-        <div class="note">gegenüber 70 Vol-% im Einsatzgemisch — der Alkohol wurde angereichert</div>
-      </div>
-      <div class="fig">
-        <div class="lab">Kopftemperatur</div>
-        <div class="val">71 → 93<span class="u">°C</span></div>
-        <div class="note">steigt, sobald der Alkohol ausgeht</div>
-      </div>
-      <div class="fig">
-        <div class="lab">Höchster Gehalt (Fraktion 1)</div>
-        <div class="val">0.788<span class="u">g/mL</span></div>
-        <div class="note">fast reines Ethanol (0.789 g/mL)</div>
-      </div>
-      <div class="fig">
-        <div class="lab">Kumuliertes Volumen</div>
-        <div class="val">50<span class="u">mL</span></div>
-        <div class="note">in 25 Fraktionen zu je 2 mL</div>
-      </div>
-    </div>
-
     <div class="overview">
       <a class="ovcard" href="#chemie">
         <div class="k">Teil 1 · Fragestellung</div>
@@ -663,8 +603,8 @@ h1.qh1 em.e{color:var(--p-eth)}
       <a class="ovcard" href="#geschichte">
         <div class="k">Teil 2 · Fragestellung</div>
         <h3>Wie wurde im 18.&nbsp;Jahrhundert destilliert und was bedeutete das für den Alkohol?</h3>
-        <p>Fünftausend Jahre Apparatebau als Zeitleiste, die Beantwortung anhand von Lavoisier,
-           Kockmann und CHEMIE.DE — dazu das Quellenverzeichnis.</p>
+        <p>Die Beantwortung anhand von Lavoisiers <i>Traité élémentaire de chimie</i>, Kockmann
+           und CHEMIE.DE — dazu Quellen- und Abbildungsverzeichnis.</p>
       </a>
       <a class="ovcard" href="#zusammenfuehrung">
         <div class="k">Teil 3</div>
@@ -676,9 +616,22 @@ h1.qh1 em.e{color:var(--p-eth)}
   </div>
 </section>
 
+<!-- ================= TEIL 1 · CHEMIE ================= -->
+<section class="parthead" id="chemie">
+  <div class="wrap">
+    <span class="partlabel"><span class="dot"></span>Teil 1</span>
+    <h2 class="qh2">Warum enthält das erste Destillat mehr Ethanol und das letzte Destillat mehr Wasser?</h2>
+    <p class="lede">
+      Die Fragestellung des Chemie-Teils. Wie wir destilliert haben, was dabei herauskam — und
+      was die 25 Messreihen darüber aussagen.
+    </p>
+  </div>
+</section>
+
+<!-- ================= DAS VERFAHREN ================= -->
 <section id="grundlagen">
   <div class="wrap">
-    <div class="eyebrow">Das Verfahren</div>
+    <div class="eyebrow"><span class="num">01</span>Das Verfahren</div>
     <h2>Trennen, weil zwei Stoffe unterschiedlich gern verdampfen</h2>
     <p class="lede">
       Destillation ist ein <b>thermisches Trennverfahren für homogene Gemische</b>. Getrennt wird
@@ -691,8 +644,8 @@ h1.qh1 em.e{color:var(--p-eth)}
       <div>
         <div class="k">Ziel</div>
         <h3>Was wir wissen wollten</h3>
-        <p>Wie die Trennung von Ethanol und Wasser im Labor abläuft — und wie dasselbe Verfahren
-           im 18.&nbsp;Jahrhundert technisch umgesetzt wurde.</p>
+        <p>Warum enthält das <b>erste</b> Destillat mehr Ethanol und das <b>letzte</b> mehr
+           Wasser — und wie hoch ist der Alkoholgehalt der einzelnen Fraktionen?</p>
       </div>
       <div>
         <div class="k">Grösse</div>
@@ -729,21 +682,10 @@ h1.qh1 em.e{color:var(--p-eth)}
   </div>
 </section>
 
-<!-- ================= TEIL 1 · CHEMIE ================= -->
-<section class="parthead" id="chemie">
-  <div class="wrap">
-    <span class="partlabel"><span class="dot"></span>Teil 1</span>
-    <h2 class="qh2">Warum enthält das erste Destillat mehr Ethanol und das letzte Destillat mehr Wasser?</h2>
-    <p class="lede">
-      Die Fragestellung des Chemie-Teils. Wie wir destilliert haben, was dabei herauskam — und
-      was die 25 Messreihen darüber aussagen.
-    </p>
-  </div>
-</section>
-
+<!-- ================= VERSUCHSBESCHREIBUNG ================= -->
 <section id="durchfuehrung">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span>Versuchsbeschreibung</div>
+    <div class="eyebrow"><span class="num">02</span>Versuchsbeschreibung</div>
     <h2>Wie wir vorgegangen sind</h2>
     <p class="lede">
       Aufbau nach Vorgabe: Rundkolben mit Destillieraufsatz, Thermometer auf Höhe des Seitenarms,
@@ -754,7 +696,7 @@ h1.qh1 em.e{color:var(--p-eth)}
       <img src="assets/apparatur.jpg" width="278" height="494" loading="lazy"
            alt="Foto unserer Destillationsapparatur: Rundkolben auf dem Heizpilz, Destillieraufsatz mit Thermometer, schräg abwärts der Liebig-Kühler mit den beiden Wasserschläuchen, darunter das Reagenzglas.">
       <figcaption class="cap">
-        <h3>Abb. 1 — Unser Aufbau</h3>
+        <h3><a href="#abb-1" style="color:inherit;text-decoration:none">Abbildung&nbsp;1:</a> Experimentaufbau</h3>
         <p>Die Apparatur, wie sie bei uns im Labor stand. Der Vergleich mit dem
            <a href="#animation">interaktiven Teilchenmodell</a> weiter unten zeigt, was in jedem
            dieser Bauteile passiert.</p>
@@ -794,13 +736,36 @@ h1.qh1 em.e{color:var(--p-eth)}
 <!-- ================= MESSDATEN ================= -->
 <section id="daten">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span>Eigene Messdaten</div>
+    <div class="eyebrow"><span class="num">03</span>Eigene Messdaten</div>
     <h2>25 Fraktionen, drei Kurven</h2>
     <p class="lede">
       Zu jeder der 25 Fraktionen à 2 mL haben wir die Kopftemperatur abgelesen, 1 mL abpipettiert
       und gewogen und daraus über die Dichtetabelle den Alkoholgehalt σ bestimmt. Zuerst das
       Protokoll mit den Rohwerten, danach dieselben Zahlen als Kurven.
     </p>
+
+    <div class="figs">
+      <div class="fig hero-fig">
+        <div class="lab">Mittelwert Alkoholgehalt der Destillate</div>
+        <div class="val">83<span class="u">Vol-%</span></div>
+        <div class="note">gegenüber 70 Vol-% im Einsatzgemisch — der Alkohol wurde angereichert</div>
+      </div>
+      <div class="fig">
+        <div class="lab">Kopftemperatur</div>
+        <div class="val">71 → 93<span class="u">°C</span></div>
+        <div class="note">steigt, sobald der Alkohol ausgeht</div>
+      </div>
+      <div class="fig">
+        <div class="lab">Höchster Gehalt (Fraktion 1)</div>
+        <div class="val">0.788<span class="u">g/mL</span></div>
+        <div class="note">fast reines Ethanol (0.789 g/mL)</div>
+      </div>
+      <div class="fig">
+        <div class="lab">Kumuliertes Volumen</div>
+        <div class="val">50<span class="u">mL</span></div>
+        <div class="note">in 25 Fraktionen zu je 2 mL</div>
+      </div>
+    </div>
 
     <h3 class="subhead"><span>1</span>Messprotokoll</h3>
     <p>Alle Rohwerte des Versuchs. Die Zeile ganz unten zeigt die Mittelwerte über alle
@@ -874,7 +839,7 @@ h1.qh1 em.e{color:var(--p-eth)}
 <!-- ================= ANTWORT AUF DIE FRAGESTELLUNG ================= -->
 <section id="antwort">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">03</span>Antwort auf die Fragestellung</div>
+    <div class="eyebrow"><span class="num">04</span>Antwort auf die Fragestellung</div>
     <h2>Warum zuerst der Alkohol kommt — und am Schluss das Wasser</h2>
 
     <div class="answer">
@@ -1016,7 +981,7 @@ h1.qh1 em.e{color:var(--p-eth)}
 
 <section id="animation">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">04</span>Teilchenmodell — interaktiv</div>
+    <div class="eyebrow"><span class="num">05</span>Teilchenmodell — interaktiv</div>
     <h2>Was im Kolben wirklich passiert</h2>
     <p class="lede">
       Die Apparatur unten läuft als Simulation. Jede Kugel ist ein Teilchen. Beobachte, wie
@@ -1194,101 +1159,18 @@ h1.qh1 em.e{color:var(--p-eth)}
 <section class="parthead" id="geschichte">
   <div class="wrap">
     <span class="partlabel"><span class="dot"></span>Teil 2</span>
-    <h2>Die Destillation im 18.&nbsp;Jahrhundert</h2>
+    <h2 class="qh2">Wie wurde die Destillation im 18.&nbsp;Jahrhundert technisch durchgeführt und welche Bedeutung hatte sie für die Herstellung von Alkohol?</h2>
     <p class="lede">
-      Hier beantworten wir die Leitfrage der Arbeit aus historischer Sicht: Zuerst der lange Weg
-      bis dorthin als Zeitleiste, danach die technische Durchführung und ihre Bedeutung für die
-      Alkoholherstellung — anhand zeitgenössischer und moderner Quellen.
+      Die Fragestellung des Teils Geschichte und Politik — beantwortet anhand zeitgenössischer
+      und moderner Quellen.
     </p>
-  </div>
-</section>
-
-<section id="geschichte-zeitleiste">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span>Geschichtlicher Hintergrund</div>
-    <h2>Fünftausend Jahre Apparatebau</h2>
-    <p class="lede">
-      Die Destillation ist eines der ältesten Verfahren der Chemie überhaupt. Sie wurde lange
-      vor jeder Teilchentheorie benutzt — man wusste, <i>dass</i> es funktioniert, aber
-      Jahrtausende lang nicht, <i>warum</i>.
-    </p>
-
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">~3500 v.&nbsp;Chr.<small>Mesopotamien</small></div>
-        <div class="tl-body">
-          <h3>Duftstoffe aus dem Tontopf</h3>
-          <p>In Tepe Gawra fanden sich Tongefässe, die als früheste Destillationsgeräte gedeutet
-             werden. Damit wurden ätherische Öle und Duftstoffe aus Pflanzen gewonnen —
-             Parfüm, nicht Chemie.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">~1.–3.&nbsp;Jh.<small>Alexandria</small></div>
-        <div class="tl-body">
-          <h3>Maria die Jüdin und das Wasserbad</h3>
-          <p>Die alchemistische Schule Alexandrias beschreibt erste echte Apparaturen, etwa den
-             <i>Tribikos</i> mit drei Auffangrohren. Von Maria die Jüdin stammt das
-             <i>Balneum Mariae</i> — das Wasserbad, mit dem sich sanft und kontrolliert erhitzen
-             lässt. Der Heizpilz auf Stufe 3 ist sein direkter Nachfahre.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">~800–900<small>Persien / Bagdad</small></div>
-        <div class="tl-body">
-          <h3>Der Alembik — und der erste Alkohol</h3>
-          <p>Jabir ibn Hayyan perfektioniert den <i>al-anbīq</i> (daraus «Alembik»), einen
-             Destillierhelm mit gekühltem Ablaufrohr. Rund hundert Jahre später gewinnt
-             ar-Rāzī durch Destillation von Wein den Alkohol als eigenen Stoff. Auch das Wort
-             <b>Alkohol</b> stammt aus dem Arabischen (<i>al-kuhl</i>).</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">12.&nbsp;Jh.<small>Salerno</small></div>
-        <div class="tl-body">
-          <h3>«Aqua vitae» — Wasser des Lebens</h3>
-          <p>An der Medizinschule von Salerno wird der destillierte Weingeist als Heilmittel
-             beschrieben. Aus <i>aqua vitae</i> werden später Eau de vie, Aquavit und Whisky
-             (<i>uisce beatha</i>) — allesamt derselbe Name.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">1500<small>Strassburg</small></div>
-        <div class="tl-body">
-          <h3>Das erste Destillier-Lehrbuch</h3>
-          <p>Hieronymus Brunschwig veröffentlicht das <i>Liber de arte distillandi</i> — reich
-             illustriert und in deutscher Sprache. Destillation wird vom Geheimwissen zum
-             Handwerk.</p>
-        </div>
-      </div>
-      <div class="tl-item accent">
-        <div class="tl-year">1830<small>Dublin</small></div>
-        <div class="tl-body">
-          <h3>Die Kolonne macht Schluss mit dem Kolben</h3>
-          <p>Aeneas Coffey patentiert die kontinuierlich arbeitende Brennkolonne. Statt einmal
-             zu destillieren, wiederholt eine Kolonne den Verdampfungs-/Kondensationsschritt
-             hundertfach übereinander — das ist die <b>Rektifikation</b>, und genau der Schritt,
-             der unserer einfachen Apparatur fehlt.</p>
-        </div>
-      </div>
-      <div class="tl-item accent">
-        <div class="tl-year">heute<small>Industrie</small></div>
-        <div class="tl-body">
-          <h3>Vom Schnapsbrenner zur Raffinerie</h3>
-          <p>Dasselbe Prinzip trennt heute Rohöl in Benzin, Kerosin und Bitumen, gewinnt
-             Sauerstoff und Stickstoff aus verflüssigter Luft und macht aus vergorener Biomasse
-             Bioethanol. Die Destillationskolonnen einer Raffinerie sind 60 Meter hoch — der
-             Rundkolben in unserer Kapelle fasst 250 mL.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- ================= BEANTWORTUNG GESCHICHTE ================= -->
 <section id="geschichte-antwort">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span>Beantwortung der Fragestellung</div>
+    <div class="eyebrow"><span class="num">01</span>Beantwortung der Fragestellung</div>
     <h2>Von der Alchemie zum Serpentin</h2>
 
     <div class="answer">
@@ -1387,11 +1269,11 @@ h1.qh1 em.e{color:var(--p-eth)}
 <!-- ================= QUELLENVERZEICHNIS ================= -->
 <section id="quellen">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">03</span>Quellenverzeichnis</div>
-    <h2>Bibliographie</h2>
+    <div class="eyebrow"><span class="num">02</span>Verzeichnisse</div>
+    <h2>Bibliographie und Abbildungen</h2>
     <p class="lede">
-      Alle im Geschichtsteil verwendeten Quellen. Die Belege im Fliesstext sind mit dem
-      jeweiligen Eintrag verlinkt.
+      Alle verwendeten Quellen sowie die Abbildung der Arbeit. Die Belege im Fliesstext sind mit
+      dem jeweiligen Eintrag verlinkt.
     </p>
 
     <div class="srcgroup">
@@ -1430,17 +1312,18 @@ h1.qh1 em.e{color:var(--p-eth)}
       </ol>
     </div>
 
-    <div class="soon">
-      <span class="k">Noch ohne Beleg</span>
-      <h3>Diese Angaben stützen sich noch auf keine der obigen Quellen</h3>
-      <p>Die drei Quellen decken den Text zum 18.&nbsp;Jahrhundert ab. Belege fehlen bisher für:</p>
-      <ul>
-        <li><b>Die Zeitleiste</b> (Abschnitt&nbsp;01) — Tepe Gawra, Maria die Jüdin, Jabir ibn
-            Hayyan und ar-Rāzī, Salerno, Brunschwig 1500, Coffey 1830.</li>
-        <li><b>Die chemischen Kennwerte</b> — Siedetemperaturen, Dichten, Azeotrop-Zusammensetzung
-            sowie die Dichtetabelle, aus der alle σ-Werte des Messprotokolls stammen.</li>
-      </ul>
+    <div class="srcgroup">
+      <span class="k">Abbildungsverzeichnis</span>
+      <ol class="sources bib">
+        <li id="abb-1">
+          <div class="cite">
+            <b>Abbildung&nbsp;1:</b> Experimentaufbau. Fotografie von Laurin Antz. 25.08.2026.
+            <small><a href="#durchfuehrung">Zur Abbildung im Abschnitt «Versuchsbeschreibung»</a></small>
+          </div>
+        </li>
+      </ol>
     </div>
+
   </div>
 </section>
 
