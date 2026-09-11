@@ -184,7 +184,7 @@ h1 em{font-style:normal;color:var(--s-dens)}
 }
 
 /* Kennzahlen */
-.figs{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:0;margin-top:52px;
+.figs{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:0;margin-top:52px;
   border:1px solid var(--border);border-radius:16px;background:var(--surface);
   overflow:hidden;box-shadow:var(--shadow)}
 .fig{padding:20px 22px;border-left:1px solid var(--border)}
@@ -742,11 +742,6 @@ footer b{color:var(--ink-2);font-weight:580}
         <div class="note">steigt, sobald der Alkohol ausgeht</div>
       </div>
       <div class="fig">
-        <div class="lab">Höchster Gehalt (Fraktion 1)</div>
-        <div class="val">0.788<span class="u">g/mL</span></div>
-        <div class="note">fast reines Ethanol (0.789 g/mL)</div>
-      </div>
-      <div class="fig">
         <div class="lab">Kumuliertes Volumen</div>
         <div class="val">50<span class="u">mL</span></div>
         <div class="note">in 25 Fraktionen zu je 2 mL</div>
@@ -885,10 +880,12 @@ footer b{color:var(--ink-2);font-weight:580}
       <div class="finding">
         <span class="q">Die beiden Reinstoffe</span>
         <h3>Ethanol und Wasser</h3>
-        <p>Ethanol (C₂H₅OH): Siedetemperatur <b>78.3 °C</b>, Dichte <b>0.789 g/mL</b> bei 20 °C.
-          Wasser (H₂O): Siedetemperatur <b>100 °C</b>, Dichte <b>1.000 g/mL</b>.
-          Beide Werte tauchen in unseren Daten direkt auf: Die erste Fraktion misst 0.788 g/mL —
-          praktisch der Ethanolwert. Die letzte misst 0.970 g/mL und nähert sich Wasser.</p>
+        <p>Ethanol (C₂H₅OH) hat eine Siedetemperatur von <b>78.3 °C</b> und eine Dichte von
+          <b>0.789 g/mL</b> bei 20 °C. Wasser (H₂O) siedet bei <b>100 °C</b> und besitzt eine
+          Dichte von <b>1.000 g/mL</b>. In unseren Messungen treten beide Werte annähernd auf.
+          Bei den ersten Messungen lag die Dichte bei ungefähr 0.83 g/mL, was dem Wert von
+          Ethanol relativ nahekommt. In den späteren Fraktionen steigt die Dichte weiter an und
+          nähert sich zunehmend dem Wert von Wasser.</p>
       </div>
 
       <div class="finding">
